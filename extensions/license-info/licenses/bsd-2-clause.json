@@ -1,0 +1,28 @@
+{
+  "id": "BSD-2-Clause",
+  "name": "BSD 2-Clause \"Simplified\" License",
+  "category": "Permissive",
+  "summary": "A permissive license: use, change and share the code freely, including commercially, as long as you keep the copyright notice and disclaimer with redistributed copies.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [
+    "include-copyright"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/bsd-2-clause/",
+  "matchAll": [
+    "redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met",
+    "redistributions in binary form must reproduce the above copyright notice"
+  ],
+  "matchNone": [
+    "endorse or promote products derived from this software"
+  ]
+}

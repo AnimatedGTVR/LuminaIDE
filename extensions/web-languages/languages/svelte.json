@@ -1,0 +1,19 @@
+{
+  "id": "svelte",
+  "name": "Svelte",
+  "extensions": [
+    ".svelte"
+  ],
+  "markup": true,
+  "blockComments": [
+    [
+      "<!--",
+      "-->"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false
+}

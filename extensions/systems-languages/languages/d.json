@@ -1,0 +1,112 @@
+{
+  "id": "d",
+  "name": "D",
+  "extensions": [
+    ".d",
+    ".di"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ],
+    [
+      "/+",
+      "+/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "module",
+    "import",
+    "class",
+    "struct",
+    "interface",
+    "enum",
+    "union",
+    "template",
+    "mixin",
+    "alias",
+    "auto",
+    "const",
+    "immutable",
+    "shared",
+    "static",
+    "final",
+    "override",
+    "abstract",
+    "public",
+    "private",
+    "protected",
+    "pure",
+    "nothrow",
+    "lazy",
+    "scope",
+    "synchronized",
+    "unittest"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "foreach",
+    "try",
+    "catch",
+    "finally",
+    "throw",
+    "goto"
+  ],
+  "types": [
+    "int",
+    "uint",
+    "long",
+    "ulong",
+    "short",
+    "ushort",
+    "byte",
+    "ubyte",
+    "float",
+    "double",
+    "real",
+    "bool",
+    "char",
+    "wchar",
+    "dchar",
+    "string",
+    "void",
+    "size_t"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "this",
+    "super"
+  ],
+  "definitionKeywords": [
+    "class",
+    "struct",
+    "interface",
+    "enum",
+    "union",
+    "template"
+  ],
+  "multilineStrings": [
+    "`"
+  ],
+  "attributePrefix": "@",
+  "run": "rdmd {file}"
+}

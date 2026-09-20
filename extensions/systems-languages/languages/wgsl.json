@@ -1,0 +1,77 @@
+{
+  "id": "wgsl",
+  "name": "WGSL",
+  "extensions": [
+    ".wgsl"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "fn",
+    "let",
+    "var",
+    "const",
+    "struct",
+    "alias",
+    "override",
+    "enable",
+    "requires",
+    "diagnostic"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "loop",
+    "break",
+    "continue",
+    "return",
+    "switch",
+    "case",
+    "default",
+    "discard",
+    "continuing"
+  ],
+  "types": [
+    "f32",
+    "f16",
+    "i32",
+    "u32",
+    "bool",
+    "vec2",
+    "vec3",
+    "vec4",
+    "mat2x2",
+    "mat3x3",
+    "mat4x4",
+    "array",
+    "ptr",
+    "atomic",
+    "texture_2d",
+    "texture_3d",
+    "texture_cube",
+    "sampler",
+    "sampler_comparison"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "definitionKeywords": [
+    "fn",
+    "struct",
+    "alias"
+  ],
+  "attributePrefix": "@"
+}

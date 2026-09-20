@@ -1,0 +1,28 @@
+{
+  "id": "EPL-2.0",
+  "name": "Eclipse Public License 2.0",
+  "category": "Weak copyleft (per module)",
+  "summary": "Weak copyleft: changes to the covered code must be shared under the EPL, but you can combine it with other code under different terms. Includes a patent grant.",
+  "permissions": [
+    "commercial-use",
+    "distribution",
+    "modifications",
+    "patent-use",
+    "private-use"
+  ],
+  "conditions": [
+    "disclose-source",
+    "include-copyright",
+    "same-license--file"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/epl-2.0/",
+  "matchAll": [
+    "eclipse public license v 2.0"
+  ],
+  "matchNone": []
+}

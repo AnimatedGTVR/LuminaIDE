@@ -1,0 +1,34 @@
+{
+  "name": "Solarized Light",
+  "type": "light",
+  "ui": {
+    "background": "#FDF6E3",
+    "sidebar": "#EEE8D5",
+    "activityBar": "#E6DFC8",
+    "panel": "#EEE8D5",
+    "input": "#FDF6E3",
+    "border": "#D9D2BC",
+    "foreground": "#586E75",
+    "muted": "#93A1A1",
+    "accent": "#268BD2",
+    "hover": "#EEE8D5",
+    "selection": "#DDE6E0",
+    "lineHighlight": "#F5EEDA",
+    "lineNumber": "#93A1A1",
+    "statusBar": "#268BD2",
+    "statusBarText": "#FDF6E3"
+  },
+  "syntax": {
+    "keyword": "#859900",
+    "control": "#CB4B16",
+    "type": "#B58900",
+    "function": "#268BD2",
+    "definition": "#268BD2",
+    "property": "#586E75",
+    "string": "#2AA198",
+    "number": "#D33682",
+    "comment": "#93A1A1",
+    "constant": "#CB4B16",
+    "attribute": "#6C71C4"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "hlsl",
+  "name": "HLSL",
+  "extensions": [
+    ".hlsl",
+    ".hlsli",
+    ".fx",
+    ".cginc",
+    ".shader",
+    ".compute"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "cbuffer",
+    "tbuffer",
+    "struct",
+    "static",
+    "const",
+    "uniform",
+    "in",
+    "out",
+    "inout",
+    "groupshared",
+    "register",
+    "packoffset",
+    "technique",
+    "pass",
+    "sampler",
+    "SamplerState",
+    "Texture2D",
+    "Texture3D",
+    "TextureCube",
+    "RWTexture2D",
+    "StructuredBuffer",
+    "RWStructuredBuffer"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "discard"
+  ],
+  "types": [
+    "float",
+    "int",
+    "uint",
+    "bool",
+    "half",
+    "double",
+    "void",
+    "float2",
+    "float3",
+    "float4",
+    "int2",
+    "int3",
+    "int4",
+    "uint2",
+    "uint3",
+    "uint4",
+    "float2x2",
+    "float3x3",
+    "float4x4",
+    "matrix",
+    "vector"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "preprocessor": true
+}

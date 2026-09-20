@@ -1,0 +1,77 @@
+{
+  "id": "clojure",
+  "name": "Clojure",
+  "extensions": [
+    ".clj",
+    ".cljs",
+    ".cljc",
+    ".edn",
+    ".bb"
+  ],
+  "keywords": [
+    "def",
+    "defn",
+    "defn-",
+    "defmacro",
+    "defmulti",
+    "defmethod",
+    "defprotocol",
+    "defrecord",
+    "deftype",
+    "ns",
+    "require",
+    "use",
+    "import",
+    "let",
+    "fn",
+    "loop",
+    "recur",
+    "do",
+    "quote",
+    "var",
+    "binding"
+  ],
+  "control": [
+    "if",
+    "when",
+    "cond",
+    "case",
+    "for",
+    "doseq",
+    "try",
+    "catch",
+    "throw",
+    "and",
+    "or",
+    "not",
+    "if-let",
+    "when-let"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil"
+  ],
+  "definitionKeywords": [
+    "def",
+    "defn",
+    "defn-",
+    "defmacro",
+    "defmulti",
+    "defprotocol",
+    "defrecord",
+    "deftype",
+    "ns"
+  ],
+  "lineComments": [
+    ";"
+  ],
+  "attributePrefix": ":",
+  "dashIdents": true,
+  "prefixCalls": true,
+  "pascalCaseTypes": false,
+  "strings": [
+    "\""
+  ],
+  "run": "clojure -M {file}"
+}

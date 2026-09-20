@@ -1,0 +1,110 @@
+{
+  "id": "cuda",
+  "name": "CUDA",
+  "extensions": [
+    ".cu",
+    ".cuh"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "class",
+    "struct",
+    "union",
+    "enum",
+    "namespace",
+    "template",
+    "typename",
+    "using",
+    "typedef",
+    "static",
+    "extern",
+    "const",
+    "constexpr",
+    "volatile",
+    "inline",
+    "virtual",
+    "override",
+    "public",
+    "private",
+    "protected",
+    "new",
+    "delete",
+    "auto",
+    "__global__",
+    "__device__",
+    "__host__",
+    "__shared__",
+    "__constant__",
+    "__restrict__",
+    "__forceinline__"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "throw"
+  ],
+  "types": [
+    "int",
+    "char",
+    "short",
+    "long",
+    "float",
+    "double",
+    "void",
+    "bool",
+    "size_t",
+    "dim3",
+    "float2",
+    "float3",
+    "float4",
+    "int2",
+    "int3",
+    "int4",
+    "uint",
+    "cudaError_t"
+  ],
+  "constants": [
+    "nullptr",
+    "NULL",
+    "true",
+    "false",
+    "this",
+    "threadIdx",
+    "blockIdx",
+    "blockDim",
+    "gridDim"
+  ],
+  "definitionKeywords": [
+    "class",
+    "struct",
+    "union",
+    "enum",
+    "namespace",
+    "template"
+  ],
+  "preprocessor": true,
+  "run": "nvcc {file} -o /tmp/lumina-run-{name} && /tmp/lumina-run-{name}",
+  "runWindows": ""
+}

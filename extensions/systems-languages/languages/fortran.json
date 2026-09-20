@@ -1,0 +1,87 @@
+{
+  "id": "fortran",
+  "name": "Fortran",
+  "extensions": [
+    ".f90",
+    ".f95",
+    ".f03",
+    ".f08",
+    ".f",
+    ".for",
+    ".f77"
+  ],
+  "keywords": [
+    "program",
+    "module",
+    "use",
+    "implicit",
+    "none",
+    "contains",
+    "subroutine",
+    "function",
+    "end",
+    "interface",
+    "type",
+    "allocatable",
+    "dimension",
+    "intent",
+    "parameter",
+    "save",
+    "public",
+    "private",
+    "pure",
+    "elemental",
+    "recursive",
+    "call",
+    "allocate",
+    "deallocate",
+    "result"
+  ],
+  "control": [
+    "if",
+    "then",
+    "else",
+    "elseif",
+    "select",
+    "case",
+    "do",
+    "while",
+    "exit",
+    "cycle",
+    "return",
+    "stop",
+    "goto",
+    "where",
+    "forall"
+  ],
+  "types": [
+    "integer",
+    "real",
+    "double",
+    "precision",
+    "complex",
+    "logical",
+    "character"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "definitionKeywords": [
+    "program",
+    "subroutine",
+    "function",
+    "module"
+  ],
+  "lineComments": [
+    "!"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "caseInsensitive": true,
+  "pascalCaseTypes": false,
+  "run": "gfortran {file} -o /tmp/lumina-run-{name} && /tmp/lumina-run-{name}",
+  "runWindows": ""
+}

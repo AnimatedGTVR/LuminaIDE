@@ -1,0 +1,16 @@
+{
+  "id": "latex",
+  "name": "LaTeX",
+  "extensions": [
+    ".tex",
+    ".sty",
+    ".cls",
+    ".bib",
+    ".ltx"
+  ],
+  "lineComments": [
+    "%"
+  ],
+  "attributePrefix": "\\",
+  "pascalCaseTypes": false
+}

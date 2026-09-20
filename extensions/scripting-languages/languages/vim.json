@@ -1,0 +1,68 @@
+{
+  "id": "vim",
+  "name": "Vim Script",
+  "extensions": [
+    ".vim"
+  ],
+  "keywords": [
+    "function",
+    "endfunction",
+    "let",
+    "set",
+    "call",
+    "execute",
+    "source",
+    "command",
+    "autocmd",
+    "augroup",
+    "end",
+    "syntax",
+    "highlight",
+    "map",
+    "nnoremap",
+    "inoremap",
+    "vnoremap",
+    "noremap",
+    "nmap",
+    "imap",
+    "vmap",
+    "unlet",
+    "finish"
+  ],
+  "control": [
+    "if",
+    "elseif",
+    "else",
+    "endif",
+    "for",
+    "endfor",
+    "while",
+    "endwhile",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "endtry"
+  ],
+  "constants": [
+    "v:true",
+    "v:false"
+  ],
+  "definitionKeywords": [
+    "function"
+  ],
+  "filenames": [
+    ".vimrc",
+    "vimrc",
+    "_vimrc"
+  ],
+  "lineComments": [
+    "\""
+  ],
+  "strings": [
+    "'"
+  ],
+  "pascalCaseTypes": false
+}

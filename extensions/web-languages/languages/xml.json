@@ -1,0 +1,37 @@
+{
+  "id": "xml",
+  "name": "XML",
+  "extensions": [
+    ".xml",
+    ".xsd",
+    ".xsl",
+    ".xslt",
+    ".svg",
+    ".plist",
+    ".csproj",
+    ".fsproj",
+    ".vbproj",
+    ".props",
+    ".targets",
+    ".xaml",
+    ".axaml",
+    ".resx",
+    ".rss",
+    ".atom",
+    ".gpx",
+    ".kml",
+    ".pom"
+  ],
+  "markup": true,
+  "blockComments": [
+    [
+      "<!--",
+      "-->"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false
+}

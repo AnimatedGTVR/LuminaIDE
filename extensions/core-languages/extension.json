@@ -1,0 +1,25 @@
+{
+  "name": "core-languages",
+  "displayName": "Core Languages",
+  "version": "0.1.0",
+  "description": "Syntax highlighting for Rust, C, C++, C#, Python, JavaScript, TypeScript, JSON, TOML, YAML, Shell, Go, Java, Lua, SQL, Zig, Kotlin.",
+  "languages": [
+    "languages/rust.json",
+    "languages/c.json",
+    "languages/cpp.json",
+    "languages/csharp.json",
+    "languages/python.json",
+    "languages/javascript.json",
+    "languages/typescript.json",
+    "languages/json.json",
+    "languages/toml.json",
+    "languages/yaml.json",
+    "languages/shell.json",
+    "languages/go.json",
+    "languages/java.json",
+    "languages/lua.json",
+    "languages/sql.json",
+    "languages/zig.json",
+    "languages/kotlin.json"
+  ]
+}

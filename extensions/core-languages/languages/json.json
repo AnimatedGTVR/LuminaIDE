@@ -1,0 +1,28 @@
+{
+  "id": "json",
+  "name": "JSON",
+  "extensions": [
+    ".json",
+    ".jsonc",
+    ".geojson"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null"
+  ],
+  "pascalCaseTypes": false,
+  "stringKeys": true
+}

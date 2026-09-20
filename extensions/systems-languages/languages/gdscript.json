@@ -1,0 +1,95 @@
+{
+  "id": "gdscript",
+  "name": "GDScript",
+  "extensions": [
+    ".gd"
+  ],
+  "keywords": [
+    "func",
+    "class",
+    "class_name",
+    "extends",
+    "var",
+    "const",
+    "signal",
+    "enum",
+    "static",
+    "tool",
+    "export",
+    "onready",
+    "setget",
+    "await",
+    "pass",
+    "void",
+    "is",
+    "as",
+    "in"
+  ],
+  "control": [
+    "if",
+    "elif",
+    "else",
+    "for",
+    "while",
+    "match",
+    "break",
+    "continue",
+    "return",
+    "and",
+    "or",
+    "not",
+    "assert"
+  ],
+  "types": [
+    "int",
+    "float",
+    "bool",
+    "String",
+    "StringName",
+    "Vector2",
+    "Vector3",
+    "Vector4",
+    "Color",
+    "Rect2",
+    "Node",
+    "Node2D",
+    "Node3D",
+    "Control",
+    "Array",
+    "Dictionary",
+    "Object",
+    "Resource",
+    "PackedScene",
+    "Callable",
+    "Signal"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "self",
+    "PI",
+    "TAU",
+    "INF",
+    "NAN"
+  ],
+  "definitionKeywords": [
+    "func",
+    "class",
+    "class_name",
+    "signal",
+    "enum"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "multilineStrings": [
+    "\"\"\"",
+    "'''"
+  ],
+  "attributePrefix": "@"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "lumina-themes",
+  "displayName": "Lumina Themes",
+  "version": "0.2.0",
+  "description": "Vanta Night, Graphite, Daylight, Ember, Nord, Dracula and Solarized Light.",
+  "themes": [
+    "themes/daylight.json",
+    "themes/dracula.json",
+    "themes/ember.json",
+    "themes/graphite.json",
+    "themes/nord.json",
+    "themes/solarized-light.json",
+    "themes/vanta-night.json"
+  ]
+}

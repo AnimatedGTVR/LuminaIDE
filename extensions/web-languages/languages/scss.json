@@ -1,0 +1,26 @@
+{
+  "id": "scss",
+  "name": "SCSS / Sass",
+  "extensions": [
+    ".scss",
+    ".sass"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "dashIdents": true,
+  "hexColors": true,
+  "keyChars": ":",
+  "attributePrefix": "@",
+  "pascalCaseTypes": false
+}

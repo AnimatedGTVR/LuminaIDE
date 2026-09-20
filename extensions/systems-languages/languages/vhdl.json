@@ -1,0 +1,97 @@
+{
+  "id": "vhdl",
+  "name": "VHDL",
+  "extensions": [
+    ".vhd",
+    ".vhdl"
+  ],
+  "keywords": [
+    "library",
+    "use",
+    "entity",
+    "architecture",
+    "is",
+    "of",
+    "begin",
+    "end",
+    "port",
+    "map",
+    "signal",
+    "variable",
+    "constant",
+    "type",
+    "subtype",
+    "process",
+    "component",
+    "generic",
+    "package",
+    "body",
+    "function",
+    "procedure",
+    "in",
+    "out",
+    "inout",
+    "buffer",
+    "to",
+    "downto",
+    "others",
+    "attribute"
+  ],
+  "control": [
+    "if",
+    "then",
+    "elsif",
+    "else",
+    "case",
+    "when",
+    "for",
+    "loop",
+    "while",
+    "return",
+    "exit",
+    "next",
+    "wait",
+    "and",
+    "or",
+    "not",
+    "xor",
+    "nand",
+    "nor"
+  ],
+  "types": [
+    "std_logic",
+    "std_logic_vector",
+    "std_ulogic",
+    "integer",
+    "boolean",
+    "bit",
+    "bit_vector",
+    "natural",
+    "positive",
+    "unsigned",
+    "signed",
+    "string",
+    "time"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "open"
+  ],
+  "definitionKeywords": [
+    "entity",
+    "architecture",
+    "package",
+    "function",
+    "procedure",
+    "component"
+  ],
+  "lineComments": [
+    "--"
+  ],
+  "strings": [
+    "\""
+  ],
+  "caseInsensitive": true,
+  "pascalCaseTypes": false
+}

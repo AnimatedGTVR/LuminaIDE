@@ -1,0 +1,98 @@
+{
+  "id": "javascript",
+  "name": "JavaScript",
+  "extensions": [
+    ".js",
+    ".mjs",
+    ".cjs",
+    ".jsx"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "multilineStrings": [
+    "`"
+  ],
+  "keywords": [
+    "function",
+    "class",
+    "const",
+    "let",
+    "var",
+    "import",
+    "export",
+    "from",
+    "as",
+    "extends",
+    "new",
+    "typeof",
+    "instanceof",
+    "delete",
+    "void",
+    "async",
+    "await",
+    "static",
+    "get",
+    "set",
+    "of",
+    "in"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "throw",
+    "yield"
+  ],
+  "types": [
+    "Array",
+    "Object",
+    "String",
+    "Number",
+    "Boolean",
+    "Promise",
+    "Map",
+    "Set",
+    "Date",
+    "Math",
+    "JSON",
+    "Symbol",
+    "Error"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "undefined",
+    "this",
+    "super",
+    "NaN",
+    "Infinity"
+  ],
+  "definitionKeywords": [
+    "function",
+    "class"
+  ],
+  "run": "node {file}"
+}

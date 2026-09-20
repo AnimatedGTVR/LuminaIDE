@@ -1,0 +1,119 @@
+{
+  "id": "cpp",
+  "name": "C++",
+  "extensions": [
+    ".cpp",
+    ".cc",
+    ".cxx",
+    ".hpp",
+    ".hh",
+    ".hxx"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "preprocessor": true,
+  "keywords": [
+    "class",
+    "struct",
+    "union",
+    "enum",
+    "namespace",
+    "template",
+    "typename",
+    "using",
+    "typedef",
+    "static",
+    "extern",
+    "const",
+    "constexpr",
+    "volatile",
+    "inline",
+    "virtual",
+    "override",
+    "final",
+    "public",
+    "private",
+    "protected",
+    "friend",
+    "operator",
+    "new",
+    "delete",
+    "explicit",
+    "mutable",
+    "noexcept",
+    "auto",
+    "decltype",
+    "sizeof"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "goto",
+    "try",
+    "catch",
+    "throw",
+    "co_await",
+    "co_return",
+    "co_yield"
+  ],
+  "types": [
+    "int",
+    "char",
+    "short",
+    "long",
+    "float",
+    "double",
+    "void",
+    "bool",
+    "size_t",
+    "std",
+    "string",
+    "vector",
+    "map",
+    "unique_ptr",
+    "shared_ptr",
+    "uint8_t",
+    "uint16_t",
+    "uint32_t",
+    "uint64_t",
+    "int8_t",
+    "int16_t",
+    "int32_t",
+    "int64_t"
+  ],
+  "constants": [
+    "nullptr",
+    "NULL",
+    "true",
+    "false",
+    "this"
+  ],
+  "definitionKeywords": [
+    "class",
+    "struct",
+    "union",
+    "enum",
+    "namespace"
+  ],
+  "run": "c++ {file} -o /tmp/lumina-run-{name} && /tmp/lumina-run-{name}",
+  "runWindows": ""
+}

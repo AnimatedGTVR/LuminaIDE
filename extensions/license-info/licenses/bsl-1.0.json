@@ -1,0 +1,25 @@
+{
+  "id": "BSL-1.0",
+  "name": "Boost Software License 1.0",
+  "category": "Permissive",
+  "summary": "Permissive, and even lighter than MIT: the notice is only required when you distribute source code, not when you ship compiled programs.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [
+    "include-copyright--source"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/bsl-1.0/",
+  "matchAll": [
+    "boost software license version 1.0"
+  ],
+  "matchNone": []
+}

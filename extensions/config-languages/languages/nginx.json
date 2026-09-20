@@ -1,0 +1,50 @@
+{
+  "id": "nginx",
+  "name": "Nginx",
+  "extensions": [
+    ".nginx"
+  ],
+  "keywords": [
+    "server",
+    "location",
+    "upstream",
+    "http",
+    "events",
+    "map",
+    "set",
+    "include",
+    "listen",
+    "server_name",
+    "root",
+    "index",
+    "proxy_pass",
+    "return",
+    "rewrite",
+    "try_files",
+    "error_page",
+    "fastcgi_pass",
+    "access_log",
+    "error_log",
+    "ssl_certificate",
+    "ssl_certificate_key",
+    "gzip"
+  ],
+  "control": [
+    "if"
+  ],
+  "constants": [
+    "on",
+    "off"
+  ],
+  "filenames": [
+    "nginx.conf"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false
+}

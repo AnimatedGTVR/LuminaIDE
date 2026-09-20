@@ -1,0 +1,110 @@
+{
+  "id": "scala",
+  "name": "Scala",
+  "extensions": [
+    ".scala",
+    ".sc",
+    ".sbt"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "package",
+    "import",
+    "class",
+    "object",
+    "trait",
+    "extends",
+    "with",
+    "case",
+    "def",
+    "val",
+    "var",
+    "type",
+    "lazy",
+    "implicit",
+    "given",
+    "using",
+    "enum",
+    "extension",
+    "sealed",
+    "abstract",
+    "final",
+    "override",
+    "private",
+    "protected",
+    "new",
+    "yield",
+    "opaque",
+    "inline"
+  ],
+  "control": [
+    "if",
+    "else",
+    "match",
+    "for",
+    "while",
+    "do",
+    "return",
+    "throw",
+    "try",
+    "catch",
+    "finally"
+  ],
+  "types": [
+    "Int",
+    "Long",
+    "Short",
+    "Byte",
+    "Double",
+    "Float",
+    "Boolean",
+    "Char",
+    "String",
+    "Unit",
+    "Any",
+    "AnyRef",
+    "AnyVal",
+    "Nothing",
+    "List",
+    "Map",
+    "Set",
+    "Option",
+    "Seq",
+    "Vector",
+    "Array",
+    "Either",
+    "Try"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "this",
+    "super",
+    "None",
+    "Some"
+  ],
+  "definitionKeywords": [
+    "def",
+    "class",
+    "object",
+    "trait",
+    "type",
+    "enum"
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "attributePrefix": "@"
+}

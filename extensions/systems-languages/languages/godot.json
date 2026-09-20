@@ -1,0 +1,34 @@
+{
+  "id": "godot",
+  "name": "Godot Resource",
+  "extensions": [
+    ".tscn",
+    ".tres",
+    ".godot",
+    ".import",
+    ".gdextension"
+  ],
+  "keywords": [
+    "gd_scene",
+    "gd_resource",
+    "node",
+    "ext_resource",
+    "sub_resource",
+    "connection",
+    "editable",
+    "resource"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null"
+  ],
+  "lineComments": [
+    ";"
+  ],
+  "strings": [
+    "\""
+  ],
+  "keyChars": "=",
+  "pascalCaseTypes": false
+}

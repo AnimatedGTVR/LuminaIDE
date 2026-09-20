@@ -1,0 +1,113 @@
+{
+  "id": "dart",
+  "name": "Dart",
+  "extensions": [
+    ".dart"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "keywords": [
+    "import",
+    "export",
+    "library",
+    "part",
+    "as",
+    "show",
+    "hide",
+    "class",
+    "abstract",
+    "extends",
+    "implements",
+    "with",
+    "mixin",
+    "enum",
+    "typedef",
+    "extension",
+    "on",
+    "static",
+    "final",
+    "const",
+    "var",
+    "late",
+    "required",
+    "external",
+    "factory",
+    "get",
+    "set",
+    "operator",
+    "async",
+    "await",
+    "sync",
+    "yield",
+    "new",
+    "this",
+    "super",
+    "covariant"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "throw",
+    "rethrow",
+    "assert"
+  ],
+  "types": [
+    "int",
+    "double",
+    "num",
+    "bool",
+    "String",
+    "List",
+    "Map",
+    "Set",
+    "Object",
+    "dynamic",
+    "void",
+    "Future",
+    "Stream",
+    "Iterable",
+    "Function",
+    "Null"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null"
+  ],
+  "definitionKeywords": [
+    "class",
+    "enum",
+    "mixin",
+    "typedef",
+    "extension"
+  ],
+  "multilineStrings": [
+    "\"\"\"",
+    "'''"
+  ],
+  "attributePrefix": "@",
+  "run": "dart run {file}"
+}

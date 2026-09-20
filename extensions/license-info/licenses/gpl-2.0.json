@@ -1,0 +1,33 @@
+{
+  "id": "GPL-2.0",
+  "name": "GNU General Public License v2.0",
+  "category": "Strong copyleft",
+  "summary": "Strong copyleft: you can use, change and sell the software, but if you distribute it (or something built on it) you must share the complete source under the same license.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [
+    "disclose-source",
+    "include-copyright",
+    "document-changes",
+    "same-license"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [
+    "Generally considered incompatible with Apache-2.0 code."
+  ],
+  "url": "https://choosealicense.com/licenses/gpl-2.0/",
+  "matchAll": [
+    "gnu general public license version 2 june 1991"
+  ],
+  "matchNone": [
+    "gnu lesser general public license version 2.1",
+    "gnu library general public license"
+  ]
+}

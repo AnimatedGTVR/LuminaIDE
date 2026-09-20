@@ -1,0 +1,31 @@
+{
+  "id": "CC-BY-SA-4.0",
+  "name": "Creative Commons Attribution-ShareAlike 4.0",
+  "category": "Creative Commons",
+  "summary": "Like CC BY 4.0, but anything you build on it must be shared under the same license (share-alike).",
+  "permissions": [
+    "commercial-use",
+    "distribution",
+    "modifications",
+    "private-use"
+  ],
+  "conditions": [
+    "include-copyright",
+    "document-changes",
+    "same-license"
+  ],
+  "limitations": [
+    "liability",
+    "patent-use",
+    "trademark-use",
+    "warranty"
+  ],
+  "notes": [
+    "Designed for creative works, documentation and data rather than software."
+  ],
+  "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "matchAll": [
+    "creative commons attribution sharealike 4.0 international public license"
+  ],
+  "matchNone": []
+}

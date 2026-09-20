@@ -1,0 +1,27 @@
+{
+  "id": "CC0-1.0",
+  "name": "Creative Commons Zero v1.0 Universal",
+  "category": "Public domain",
+  "summary": "Gives up as many rights as the law allows, effectively a public-domain dedication. Unlike most licenses it explicitly does not grant any patent or trademark rights.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [],
+  "limitations": [
+    "liability",
+    "patent-use",
+    "trademark-use",
+    "warranty"
+  ],
+  "notes": [
+    "Popular for data, documentation and other non-software work."
+  ],
+  "url": "https://choosealicense.com/licenses/cc0-1.0/",
+  "matchAll": [
+    "cc0 1.0 universal"
+  ],
+  "matchNone": []
+}

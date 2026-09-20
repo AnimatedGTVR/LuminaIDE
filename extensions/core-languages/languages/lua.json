@@ -1,0 +1,54 @@
+{
+  "id": "lua",
+  "name": "Lua",
+  "extensions": [
+    ".lua"
+  ],
+  "lineComments": [
+    "--"
+  ],
+  "blockComments": [
+    [
+      "--[[",
+      "]]"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "keywords": [
+    "function",
+    "local",
+    "end",
+    "then",
+    "do",
+    "repeat",
+    "until"
+  ],
+  "control": [
+    "if",
+    "elseif",
+    "else",
+    "for",
+    "while",
+    "in",
+    "return",
+    "break",
+    "goto",
+    "and",
+    "or",
+    "not"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil",
+    "self"
+  ],
+  "definitionKeywords": [
+    "function"
+  ],
+  "pascalCaseTypes": false,
+  "run": "lua {file}"
+}

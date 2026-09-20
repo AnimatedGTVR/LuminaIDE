@@ -1,0 +1,100 @@
+{
+  "id": "kotlin",
+  "name": "Kotlin",
+  "extensions": [
+    ".kt",
+    ".kts"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "attributePrefix": "@",
+  "keywords": [
+    "package",
+    "import",
+    "class",
+    "interface",
+    "object",
+    "fun",
+    "val",
+    "var",
+    "typealias",
+    "enum",
+    "sealed",
+    "data",
+    "open",
+    "abstract",
+    "override",
+    "private",
+    "public",
+    "protected",
+    "internal",
+    "companion",
+    "init",
+    "constructor",
+    "by",
+    "is",
+    "as",
+    "in",
+    "out",
+    "suspend",
+    "inline"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "when",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "throw"
+  ],
+  "types": [
+    "Int",
+    "Long",
+    "Short",
+    "Byte",
+    "Float",
+    "Double",
+    "Boolean",
+    "Char",
+    "String",
+    "Any",
+    "Unit",
+    "Nothing",
+    "List",
+    "Map",
+    "Set"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "this",
+    "super"
+  ],
+  "definitionKeywords": [
+    "class",
+    "interface",
+    "object",
+    "fun"
+  ]
+}

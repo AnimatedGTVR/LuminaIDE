@@ -1,0 +1,56 @@
+{
+  "id": "terraform",
+  "name": "Terraform / HCL",
+  "extensions": [
+    ".tf",
+    ".tfvars",
+    ".hcl"
+  ],
+  "keywords": [
+    "resource",
+    "data",
+    "variable",
+    "output",
+    "locals",
+    "module",
+    "provider",
+    "terraform",
+    "required_providers",
+    "backend"
+  ],
+  "control": [
+    "for",
+    "in",
+    "if"
+  ],
+  "types": [
+    "string",
+    "number",
+    "bool",
+    "list",
+    "map",
+    "set",
+    "object",
+    "any"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null"
+  ],
+  "lineComments": [
+    "#",
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keyChars": "=",
+  "pascalCaseTypes": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "r",
+  "name": "R",
+  "extensions": [
+    ".r"
+  ],
+  "keywords": [
+    "function",
+    "repeat",
+    "library",
+    "require",
+    "source"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "break",
+    "next",
+    "return",
+    "in"
+  ],
+  "types": [
+    "numeric",
+    "character",
+    "logical",
+    "integer",
+    "double",
+    "complex",
+    "list",
+    "data.frame",
+    "matrix",
+    "factor"
+  ],
+  "constants": [
+    "TRUE",
+    "FALSE",
+    "NULL",
+    "NA",
+    "Inf",
+    "NaN",
+    "NA_integer_",
+    "NA_real_",
+    "NA_character_"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false,
+  "run": "Rscript {file}"
+}

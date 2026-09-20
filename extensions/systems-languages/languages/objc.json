@@ -1,0 +1,95 @@
+{
+  "id": "objc",
+  "name": "Objective-C",
+  "extensions": [
+    ".m",
+    ".mm"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "typedef",
+    "struct",
+    "union",
+    "enum",
+    "static",
+    "extern",
+    "const",
+    "volatile",
+    "inline",
+    "id",
+    "self",
+    "super",
+    "in",
+    "out",
+    "inout",
+    "bycopy",
+    "byref",
+    "oneway",
+    "nonatomic",
+    "atomic",
+    "strong",
+    "weak",
+    "assign",
+    "copy",
+    "retain",
+    "readonly",
+    "readwrite",
+    "unsigned",
+    "signed"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "goto"
+  ],
+  "types": [
+    "int",
+    "char",
+    "short",
+    "long",
+    "float",
+    "double",
+    "void",
+    "BOOL",
+    "SEL",
+    "Class",
+    "NSString",
+    "NSArray",
+    "NSDictionary",
+    "NSObject",
+    "NSInteger",
+    "NSUInteger",
+    "CGFloat",
+    "size_t"
+  ],
+  "constants": [
+    "nil",
+    "NULL",
+    "YES",
+    "NO",
+    "true",
+    "false"
+  ],
+  "preprocessor": true,
+  "attributePrefix": "@"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "rust",
+  "name": "Rust",
+  "extensions": [
+    ".rs"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "fn",
+    "let",
+    "mut",
+    "const",
+    "static",
+    "struct",
+    "enum",
+    "trait",
+    "impl",
+    "type",
+    "mod",
+    "use",
+    "pub",
+    "crate",
+    "super",
+    "self",
+    "Self",
+    "where",
+    "as",
+    "dyn",
+    "ref",
+    "move",
+    "unsafe",
+    "extern",
+    "async",
+    "await",
+    "macro_rules"
+  ],
+  "control": [
+    "if",
+    "else",
+    "match",
+    "for",
+    "while",
+    "loop",
+    "in",
+    "return",
+    "break",
+    "continue"
+  ],
+  "types": [
+    "i8",
+    "i16",
+    "i32",
+    "i64",
+    "i128",
+    "isize",
+    "u8",
+    "u16",
+    "u32",
+    "u64",
+    "u128",
+    "usize",
+    "f32",
+    "f64",
+    "bool",
+    "char",
+    "str",
+    "String",
+    "Vec",
+    "Option",
+    "Result",
+    "Box",
+    "Rc",
+    "Arc"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "None",
+    "Some",
+    "Ok",
+    "Err"
+  ],
+  "definitionKeywords": [
+    "fn",
+    "struct",
+    "enum",
+    "trait",
+    "type",
+    "mod"
+  ],
+  "attributePrefix": "#[",
+  "run": "cargo run"
+}

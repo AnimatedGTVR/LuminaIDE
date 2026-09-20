@@ -1,0 +1,87 @@
+{
+  "id": "haskell",
+  "name": "Haskell",
+  "extensions": [
+    ".hs",
+    ".lhs",
+    ".hsc"
+  ],
+  "keywords": [
+    "module",
+    "import",
+    "qualified",
+    "as",
+    "hiding",
+    "where",
+    "let",
+    "in",
+    "data",
+    "type",
+    "newtype",
+    "class",
+    "instance",
+    "deriving",
+    "family",
+    "forall",
+    "infixl",
+    "infixr",
+    "infix",
+    "foreign",
+    "default"
+  ],
+  "control": [
+    "if",
+    "then",
+    "else",
+    "case",
+    "of",
+    "do"
+  ],
+  "types": [
+    "Int",
+    "Integer",
+    "Double",
+    "Float",
+    "Bool",
+    "Char",
+    "String",
+    "Maybe",
+    "Either",
+    "IO",
+    "Ordering",
+    "Word",
+    "Rational"
+  ],
+  "constants": [
+    "True",
+    "False",
+    "Nothing",
+    "Just",
+    "Left",
+    "Right",
+    "otherwise",
+    "LT",
+    "GT",
+    "EQ"
+  ],
+  "definitionKeywords": [
+    "data",
+    "type",
+    "newtype",
+    "class",
+    "module"
+  ],
+  "lineComments": [
+    "--"
+  ],
+  "blockComments": [
+    [
+      "{-",
+      "-}"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "run": "runghc {file}"
+}

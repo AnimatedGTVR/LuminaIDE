@@ -1,0 +1,23 @@
+{
+  "id": "Unlicense",
+  "name": "The Unlicense",
+  "category": "Public domain",
+  "summary": "Dedicates the work to the public domain: anyone may copy, change, sell or share it for any purpose, with no conditions.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/unlicense/",
+  "matchAll": [
+    "this is free and unencumbered software released into the public domain"
+  ],
+  "matchNone": []
+}

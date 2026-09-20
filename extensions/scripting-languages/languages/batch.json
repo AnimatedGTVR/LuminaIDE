@@ -1,0 +1,52 @@
+{
+  "id": "batch",
+  "name": "Batch",
+  "extensions": [
+    ".bat",
+    ".cmd"
+  ],
+  "keywords": [
+    "echo",
+    "set",
+    "setlocal",
+    "endlocal",
+    "call",
+    "goto",
+    "exit",
+    "pause",
+    "cd",
+    "dir",
+    "copy",
+    "move",
+    "del",
+    "type",
+    "cls",
+    "title",
+    "start",
+    "rem"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "in",
+    "do",
+    "not",
+    "exist",
+    "errorlevel"
+  ],
+  "lineComments": [
+    "::",
+    "REM ",
+    "rem ",
+    "Rem "
+  ],
+  "strings": [
+    "\""
+  ],
+  "caseInsensitive": true,
+  "pascalCaseTypes": false,
+  "attributePrefix": "%",
+  "run": "",
+  "runWindows": "{file}"
+}

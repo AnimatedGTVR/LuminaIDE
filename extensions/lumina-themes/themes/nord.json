@@ -1,0 +1,34 @@
+{
+  "name": "Nord",
+  "type": "dark",
+  "ui": {
+    "background": "#2E3440",
+    "sidebar": "#2B303B",
+    "activityBar": "#252A33",
+    "panel": "#2B303B",
+    "input": "#252A33",
+    "border": "#3B4252",
+    "foreground": "#D8DEE9",
+    "muted": "#7B88A1",
+    "accent": "#88C0D0",
+    "hover": "#3B4252",
+    "selection": "#434C5E",
+    "lineHighlight": "#333A47",
+    "lineNumber": "#4C566A",
+    "statusBar": "#3B4252",
+    "statusBarText": "#D8DEE9"
+  },
+  "syntax": {
+    "keyword": "#81A1C1",
+    "control": "#81A1C1",
+    "type": "#8FBCBB",
+    "function": "#88C0D0",
+    "definition": "#88C0D0",
+    "property": "#D8DEE9",
+    "string": "#A3BE8C",
+    "number": "#B48EAD",
+    "comment": "#616E88",
+    "constant": "#B48EAD",
+    "attribute": "#D08770"
+  }
+}

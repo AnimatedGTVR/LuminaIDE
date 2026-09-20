@@ -1,0 +1,50 @@
+{
+  "id": "tcl",
+  "name": "Tcl",
+  "extensions": [
+    ".tcl",
+    ".tk"
+  ],
+  "keywords": [
+    "proc",
+    "set",
+    "global",
+    "variable",
+    "namespace",
+    "package",
+    "require",
+    "source",
+    "upvar",
+    "uplevel",
+    "expr",
+    "list",
+    "lappend",
+    "puts",
+    "return",
+    "array",
+    "dict"
+  ],
+  "control": [
+    "if",
+    "elseif",
+    "else",
+    "while",
+    "for",
+    "foreach",
+    "switch",
+    "break",
+    "continue",
+    "catch"
+  ],
+  "definitionKeywords": [
+    "proc"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\""
+  ],
+  "pascalCaseTypes": false,
+  "run": "tclsh {file}"
+}

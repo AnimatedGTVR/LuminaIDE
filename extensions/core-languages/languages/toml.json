@@ -1,0 +1,24 @@
+{
+  "id": "toml",
+  "name": "TOML",
+  "extensions": [
+    ".toml"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "multilineStrings": [
+    "\"\"\"",
+    "'''"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "pascalCaseTypes": false,
+  "keyChars": "="
+}

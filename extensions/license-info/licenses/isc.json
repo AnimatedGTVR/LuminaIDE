@@ -1,0 +1,26 @@
+{
+  "id": "ISC",
+  "name": "ISC License",
+  "category": "Permissive",
+  "summary": "Functionally the same as the MIT and 2-clause BSD licenses, in simpler wording: do what you like, keep the notice.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [
+    "include-copyright"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/isc/",
+  "matchAll": [
+    "permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted",
+    "provided that the above copyright notice and this permission notice appear in all copies"
+  ],
+  "matchNone": []
+}

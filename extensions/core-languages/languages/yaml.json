@@ -1,0 +1,26 @@
+{
+  "id": "yaml",
+  "name": "YAML",
+  "extensions": [
+    ".yml",
+    ".yaml"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "yes",
+    "no",
+    "on",
+    "off"
+  ],
+  "pascalCaseTypes": false,
+  "keyChars": ":"
+}

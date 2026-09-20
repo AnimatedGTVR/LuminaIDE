@@ -1,0 +1,50 @@
+{
+  "id": "erlang",
+  "name": "Erlang",
+  "extensions": [
+    ".erl",
+    ".hrl",
+    ".escript"
+  ],
+  "keywords": [
+    "module",
+    "export",
+    "import",
+    "include",
+    "define",
+    "record",
+    "spec",
+    "type",
+    "behaviour",
+    "fun",
+    "end",
+    "when",
+    "of",
+    "after",
+    "andalso",
+    "orelse"
+  ],
+  "control": [
+    "if",
+    "case",
+    "receive",
+    "try",
+    "catch",
+    "throw"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "undefined",
+    "ok",
+    "error"
+  ],
+  "lineComments": [
+    "%"
+  ],
+  "strings": [
+    "\""
+  ],
+  "pascalCaseTypes": false,
+  "run": "escript {file}"
+}

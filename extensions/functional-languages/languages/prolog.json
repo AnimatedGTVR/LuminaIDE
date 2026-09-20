@@ -1,0 +1,42 @@
+{
+  "id": "prolog",
+  "name": "Prolog",
+  "extensions": [
+    ".pro",
+    ".prolog",
+    ".plg"
+  ],
+  "keywords": [
+    "dynamic",
+    "discontiguous",
+    "module",
+    "use_module",
+    "ensure_loaded",
+    "initialization"
+  ],
+  "control": [
+    "is",
+    "mod",
+    "rem"
+  ],
+  "constants": [
+    "true",
+    "fail",
+    "false"
+  ],
+  "lineComments": [
+    "%"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false,
+  "run": "swipl {file}"
+}

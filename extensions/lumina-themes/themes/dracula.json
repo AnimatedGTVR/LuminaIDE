@@ -1,0 +1,34 @@
+{
+  "name": "Dracula",
+  "type": "dark",
+  "ui": {
+    "background": "#282A36",
+    "sidebar": "#21222C",
+    "activityBar": "#191A21",
+    "panel": "#21222C",
+    "input": "#191A21",
+    "border": "#343746",
+    "foreground": "#F8F8F2",
+    "muted": "#6272A4",
+    "accent": "#BD93F9",
+    "hover": "#343746",
+    "selection": "#44475A",
+    "lineHighlight": "#2F3240",
+    "lineNumber": "#6272A4",
+    "statusBar": "#343746",
+    "statusBarText": "#F8F8F2"
+  },
+  "syntax": {
+    "keyword": "#FF79C6",
+    "control": "#FF79C6",
+    "type": "#8BE9FD",
+    "function": "#50FA7B",
+    "definition": "#50FA7B",
+    "property": "#F8F8F2",
+    "string": "#F1FA8C",
+    "number": "#BD93F9",
+    "comment": "#6272A4",
+    "constant": "#BD93F9",
+    "attribute": "#FFB86C"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "lisp",
+  "name": "Common Lisp / Emacs Lisp",
+  "extensions": [
+    ".lisp",
+    ".lsp",
+    ".cl",
+    ".asd",
+    ".el"
+  ],
+  "keywords": [
+    "defun",
+    "defmacro",
+    "defvar",
+    "defparameter",
+    "defconstant",
+    "defstruct",
+    "defclass",
+    "defmethod",
+    "defgeneric",
+    "let",
+    "let*",
+    "flet",
+    "labels",
+    "lambda",
+    "setf",
+    "setq",
+    "progn",
+    "loop",
+    "do",
+    "dolist",
+    "dotimes",
+    "in-package",
+    "use-package",
+    "require",
+    "provide",
+    "declare",
+    "defcustom",
+    "defgroup"
+  ],
+  "control": [
+    "if",
+    "when",
+    "unless",
+    "cond",
+    "case",
+    "return",
+    "return-from",
+    "and",
+    "or",
+    "not"
+  ],
+  "constants": [
+    "t",
+    "nil"
+  ],
+  "definitionKeywords": [
+    "defun",
+    "defmacro",
+    "defvar",
+    "defparameter",
+    "defclass",
+    "defstruct",
+    "defmethod",
+    "defgeneric",
+    "defcustom"
+  ],
+  "lineComments": [
+    ";"
+  ],
+  "blockComments": [
+    [
+      "#|",
+      "|#"
+    ]
+  ],
+  "attributePrefix": ":",
+  "dashIdents": true,
+  "prefixCalls": true,
+  "pascalCaseTypes": false,
+  "strings": [
+    "\""
+  ],
+  "run": "sbcl --script {file}"
+}

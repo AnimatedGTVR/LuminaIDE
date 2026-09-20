@@ -1,0 +1,91 @@
+{
+  "id": "glsl",
+  "name": "GLSL",
+  "extensions": [
+    ".glsl",
+    ".vert",
+    ".frag",
+    ".geom",
+    ".comp",
+    ".tesc",
+    ".tese"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "uniform",
+    "in",
+    "out",
+    "inout",
+    "layout",
+    "attribute",
+    "varying",
+    "const",
+    "struct",
+    "precision",
+    "highp",
+    "mediump",
+    "lowp",
+    "flat",
+    "smooth",
+    "centroid",
+    "buffer",
+    "shared"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "discard"
+  ],
+  "types": [
+    "float",
+    "int",
+    "uint",
+    "bool",
+    "double",
+    "void",
+    "vec2",
+    "vec3",
+    "vec4",
+    "ivec2",
+    "ivec3",
+    "ivec4",
+    "uvec2",
+    "uvec3",
+    "uvec4",
+    "bvec2",
+    "bvec3",
+    "bvec4",
+    "mat2",
+    "mat3",
+    "mat4",
+    "sampler2D",
+    "sampler3D",
+    "samplerCube",
+    "sampler2DShadow"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "preprocessor": true
+}

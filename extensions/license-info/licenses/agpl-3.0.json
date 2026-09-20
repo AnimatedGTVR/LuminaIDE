@@ -1,0 +1,32 @@
+{
+  "id": "AGPL-3.0",
+  "name": "GNU Affero General Public License v3.0",
+  "category": "Network copyleft",
+  "summary": "Like the GPL-3.0, with one addition: if you run a modified version as a network service, the people using it over the network must be offered the source code too.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "patent-use",
+    "private-use"
+  ],
+  "conditions": [
+    "disclose-source",
+    "include-copyright",
+    "document-changes",
+    "network-use-disclose",
+    "same-license"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [
+    "Many companies avoid AGPL code in hosted products because of the network clause."
+  ],
+  "url": "https://choosealicense.com/licenses/agpl-3.0/",
+  "matchAll": [
+    "gnu affero general public license version 3 19 november 2007"
+  ],
+  "matchNone": []
+}

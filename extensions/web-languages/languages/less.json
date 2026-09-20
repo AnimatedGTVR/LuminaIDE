@@ -1,0 +1,25 @@
+{
+  "id": "less",
+  "name": "Less",
+  "extensions": [
+    ".less"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "dashIdents": true,
+  "hexColors": true,
+  "keyChars": ":",
+  "attributePrefix": "@",
+  "pascalCaseTypes": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": "OFL-1.1",
+  "name": "SIL Open Font License 1.1",
+  "category": "Font license",
+  "summary": "For fonts: you may use, embed, share and modify the font for free, including in commercial products, but you may not sell the font on its own, and modified versions must stay under the OFL.",
+  "permissions": [
+    "commercial-use",
+    "distribution",
+    "modifications",
+    "private-use"
+  ],
+  "conditions": [
+    "include-copyright",
+    "same-license"
+  ],
+  "limitations": [
+    "liability",
+    "trademark-use",
+    "warranty"
+  ],
+  "notes": [
+    "If the font declares a Reserved Font Name, modified versions must not use that name.",
+    "Bundling a font inside an app or website is fine."
+  ],
+  "url": "https://openfontlicense.org",
+  "matchAll": [
+    "sil open font license version 1.1"
+  ],
+  "matchNone": []
+}

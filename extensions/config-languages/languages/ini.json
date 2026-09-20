@@ -1,0 +1,37 @@
+{
+  "id": "ini",
+  "name": "INI / Config",
+  "extensions": [
+    ".ini",
+    ".cfg",
+    ".conf",
+    ".editorconfig",
+    ".gitconfig",
+    ".desktop",
+    ".service",
+    ".socket",
+    ".timer"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "yes",
+    "no",
+    "on",
+    "off"
+  ],
+  "filenames": [
+    ".editorconfig",
+    ".gitconfig"
+  ],
+  "lineComments": [
+    ";",
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "keyChars": "=",
+  "pascalCaseTypes": false
+}

@@ -1,0 +1,88 @@
+{
+  "id": "elixir",
+  "name": "Elixir",
+  "extensions": [
+    ".ex",
+    ".exs",
+    ".heex",
+    ".eex"
+  ],
+  "keywords": [
+    "defmodule",
+    "def",
+    "defp",
+    "defmacro",
+    "defmacrop",
+    "defstruct",
+    "defprotocol",
+    "defimpl",
+    "defdelegate",
+    "defguard",
+    "import",
+    "require",
+    "use",
+    "alias",
+    "fn",
+    "do",
+    "end",
+    "when",
+    "in",
+    "and",
+    "or",
+    "not"
+  ],
+  "control": [
+    "if",
+    "else",
+    "unless",
+    "cond",
+    "case",
+    "with",
+    "for",
+    "receive",
+    "after",
+    "try",
+    "catch",
+    "rescue",
+    "raise",
+    "throw"
+  ],
+  "types": [
+    "String",
+    "Integer",
+    "Float",
+    "Atom",
+    "List",
+    "Map",
+    "Enum",
+    "Keyword",
+    "Tuple",
+    "Process",
+    "GenServer"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil"
+  ],
+  "definitionKeywords": [
+    "defmodule",
+    "def",
+    "defp",
+    "defmacro",
+    "defprotocol",
+    "defimpl"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "attributePrefix": "@",
+  "pascalCaseTypes": true,
+  "run": "elixir {file}"
+}

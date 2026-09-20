@@ -1,0 +1,56 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="LuminaIDE.WelcomeView">
+  <Grid ClipToBounds="True">
+
+    <ScrollViewer x:Name="Scroller" VerticalScrollBarVisibility="Auto">
+      <StackPanel MaxWidth="920" Margin="40,38,40,40" Spacing="26" HorizontalAlignment="Center">
+
+        <!-- Hero -->
+        <StackPanel Orientation="Horizontal" Spacing="24">
+          <Border x:Name="Logo" Width="68" Height="68" CornerRadius="16">
+            <Path Data="M4,4 V36 H30" Width="38" Height="44" Stroke="White" StrokeThickness="6" StrokeLineCap="Round" StrokeJoin="Round"
+                  HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" />
+          </Border>
+          <StackPanel VerticalAlignment="Center" Spacing="6">
+            <TextBlock x:Name="Title" Text="LuminaIDE" FontSize="38" FontWeight="Bold" LetterSpacing="-1" />
+            <TextBlock Classes="muted" FontSize="17" Text="A clear space for your next idea." />
+            <StackPanel Orientation="Horizontal" Spacing="8" Margin="0,6,0,0">
+              <Border Classes="tag"><TextBlock x:Name="VersionText" Classes="muted" FontSize="11.5" /></Border>
+              <Border Classes="tag"><TextBlock x:Name="PlatformText" Classes="muted" FontSize="11.5" /></Border>
+            </StackPanel>
+          </StackPanel>
+        </StackPanel>
+
+        <!-- Actions -->
+        <UniformGrid x:Name="Tiles" Columns="3" />
+
+        <!-- Recent + what's new -->
+        <Grid ColumnDefinitions="*,36,*">
+          <StackPanel Grid.Column="0" Spacing="4">
+            <TextBlock Classes="section" Text="YOUR WORKSPACE" Margin="8,0,0,6" />
+            <StackPanel x:Name="RecentList" Spacing="2" />
+            <TextBlock x:Name="NoRecent" Classes="muted" Margin="8,4" Text="Start with a folder. Your recent projects will appear here." TextWrapping="Wrap" />
+          </StackPanel>
+          <StackPanel Grid.Column="2" Spacing="4">
+            <TextBlock Classes="section" Text="WHAT'S NEW" Margin="8,0,0,6" />
+            <Border Classes="tile" Cursor="Arrow">
+              <StackPanel x:Name="WhatsNew" Spacing="6" />
+            </Border>
+          </StackPanel>
+        </Grid>
+
+        <!-- Theme -->
+        <StackPanel Spacing="10">
+          <TextBlock Classes="section" Text="MAKE IT YOURS" Margin="8,0,0,0" />
+          <WrapPanel x:Name="ThemeChips" />
+        </StackPanel>
+
+        <StackPanel Spacing="6" Margin="8,0,0,0">
+          <TextBlock x:Name="Tip" FontSize="13" TextWrapping="Wrap" />
+          <TextBlock x:Name="Summary" Classes="muted" FontSize="12" TextWrapping="Wrap" />
+        </StackPanel>
+      </StackPanel>
+    </ScrollViewer>
+  </Grid>
+</UserControl>

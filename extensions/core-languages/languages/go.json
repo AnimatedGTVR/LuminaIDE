@@ -1,0 +1,84 @@
+{
+  "id": "go",
+  "name": "Go",
+  "extensions": [
+    ".go"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "multilineStrings": [
+    "`"
+  ],
+  "keywords": [
+    "package",
+    "import",
+    "func",
+    "var",
+    "const",
+    "type",
+    "struct",
+    "interface",
+    "map",
+    "chan",
+    "go",
+    "defer",
+    "range"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "switch",
+    "case",
+    "default",
+    "select",
+    "return",
+    "break",
+    "continue",
+    "goto",
+    "fallthrough"
+  ],
+  "types": [
+    "int",
+    "int8",
+    "int16",
+    "int32",
+    "int64",
+    "uint",
+    "uint8",
+    "uint16",
+    "uint32",
+    "uint64",
+    "uintptr",
+    "float32",
+    "float64",
+    "string",
+    "bool",
+    "byte",
+    "rune",
+    "error",
+    "any"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil",
+    "iota"
+  ],
+  "definitionKeywords": [
+    "func",
+    "type"
+  ],
+  "run": "go run {file}"
+}

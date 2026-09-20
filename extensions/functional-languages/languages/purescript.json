@@ -1,0 +1,78 @@
+{
+  "id": "purescript",
+  "name": "PureScript",
+  "extensions": [
+    ".purs"
+  ],
+  "keywords": [
+    "module",
+    "import",
+    "where",
+    "let",
+    "in",
+    "data",
+    "newtype",
+    "type",
+    "class",
+    "instance",
+    "derive",
+    "foreign",
+    "forall",
+    "infixl",
+    "infixr",
+    "as",
+    "hiding",
+    "qualified"
+  ],
+  "control": [
+    "if",
+    "then",
+    "else",
+    "case",
+    "of",
+    "do",
+    "ado"
+  ],
+  "types": [
+    "Int",
+    "Number",
+    "String",
+    "Boolean",
+    "Char",
+    "Array",
+    "Maybe",
+    "Either",
+    "Effect",
+    "Unit"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "Nothing",
+    "Just",
+    "Left",
+    "Right"
+  ],
+  "definitionKeywords": [
+    "data",
+    "newtype",
+    "type",
+    "class",
+    "module"
+  ],
+  "lineComments": [
+    "--"
+  ],
+  "blockComments": [
+    [
+      "{-",
+      "-}"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ]
+}

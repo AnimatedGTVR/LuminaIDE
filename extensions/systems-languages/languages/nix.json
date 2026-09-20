@@ -1,0 +1,51 @@
+{
+  "id": "nix",
+  "name": "Nix",
+  "extensions": [
+    ".nix"
+  ],
+  "keywords": [
+    "let",
+    "in",
+    "with",
+    "rec",
+    "inherit",
+    "assert",
+    "import"
+  ],
+  "control": [
+    "if",
+    "then",
+    "else"
+  ],
+  "types": [
+    "builtins",
+    "derivation",
+    "fetchurl",
+    "fetchFromGitHub",
+    "mkDerivation"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "''"
+  ],
+  "keyChars": "=",
+  "pascalCaseTypes": false,
+  "run": "nix eval --file {file}"
+}

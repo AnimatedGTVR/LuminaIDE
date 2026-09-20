@@ -1,0 +1,99 @@
+{
+  "id": "crystal",
+  "name": "Crystal",
+  "extensions": [
+    ".cr"
+  ],
+  "keywords": [
+    "def",
+    "class",
+    "struct",
+    "module",
+    "enum",
+    "macro",
+    "lib",
+    "fun",
+    "alias",
+    "include",
+    "extend",
+    "abstract",
+    "private",
+    "protected",
+    "require",
+    "annotation",
+    "union",
+    "of",
+    "as",
+    "uninitialized",
+    "sizeof",
+    "typeof"
+  ],
+  "control": [
+    "if",
+    "elsif",
+    "else",
+    "unless",
+    "case",
+    "when",
+    "in",
+    "while",
+    "until",
+    "for",
+    "return",
+    "break",
+    "next",
+    "yield",
+    "begin",
+    "rescue",
+    "ensure",
+    "raise",
+    "then",
+    "do",
+    "end",
+    "and",
+    "or",
+    "not"
+  ],
+  "types": [
+    "Int8",
+    "Int16",
+    "Int32",
+    "Int64",
+    "UInt8",
+    "UInt16",
+    "UInt32",
+    "UInt64",
+    "Float32",
+    "Float64",
+    "String",
+    "Bool",
+    "Nil",
+    "Symbol",
+    "Array",
+    "Hash",
+    "Char"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil",
+    "self"
+  ],
+  "definitionKeywords": [
+    "def",
+    "class",
+    "struct",
+    "module",
+    "enum",
+    "macro"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "attributePrefix": "@[",
+  "run": "crystal run {file}"
+}

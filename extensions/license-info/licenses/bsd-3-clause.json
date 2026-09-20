@@ -1,0 +1,28 @@
+{
+  "id": "BSD-3-Clause",
+  "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+  "category": "Permissive",
+  "summary": "Like the 2-clause BSD license, with one extra rule: you may not use the authors' or contributors' names to endorse or promote products built from the code without permission.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [
+    "include-copyright"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/bsd-3-clause/",
+  "matchAll": [
+    "redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met",
+    "may be used to endorse or promote products derived from this software without specific prior written permission"
+  ],
+  "matchNone": [
+    "all advertising materials mentioning features or use of this software"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "elm",
+  "name": "Elm",
+  "extensions": [
+    ".elm"
+  ],
+  "keywords": [
+    "module",
+    "exposing",
+    "import",
+    "as",
+    "port",
+    "type",
+    "alias",
+    "let",
+    "in",
+    "where"
+  ],
+  "control": [
+    "if",
+    "then",
+    "else",
+    "case",
+    "of"
+  ],
+  "types": [
+    "Int",
+    "Float",
+    "Bool",
+    "String",
+    "Char",
+    "List",
+    "Maybe",
+    "Result",
+    "Cmd",
+    "Sub",
+    "Html",
+    "Msg",
+    "Model"
+  ],
+  "constants": [
+    "True",
+    "False",
+    "Nothing",
+    "Just",
+    "Ok",
+    "Err"
+  ],
+  "definitionKeywords": [
+    "type",
+    "module"
+  ],
+  "lineComments": [
+    "--"
+  ],
+  "blockComments": [
+    [
+      "{-",
+      "-}"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ]
+}

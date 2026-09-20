@@ -1,0 +1,29 @@
+{
+  "name": "systems-languages",
+  "displayName": "Systems & Graphics Languages",
+  "version": "0.1.0",
+  "description": "Syntax highlighting for Nix, Swift, Objective-C, D, Nim, Crystal, Odin, V, Ada, Pascal, Fortran, Assembly, GDScript, Godot Resource, GLSL, HLSL, WGSL, Verilog / SystemVerilog, VHDL, CUDA, Solidity.",
+  "languages": [
+    "languages/nix.json",
+    "languages/swift.json",
+    "languages/objc.json",
+    "languages/d.json",
+    "languages/nim.json",
+    "languages/crystal.json",
+    "languages/odin.json",
+    "languages/v.json",
+    "languages/ada.json",
+    "languages/pascal.json",
+    "languages/fortran.json",
+    "languages/asm.json",
+    "languages/gdscript.json",
+    "languages/godot.json",
+    "languages/glsl.json",
+    "languages/hlsl.json",
+    "languages/wgsl.json",
+    "languages/verilog.json",
+    "languages/vhdl.json",
+    "languages/cuda.json",
+    "languages/solidity.json"
+  ]
+}

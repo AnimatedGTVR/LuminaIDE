@@ -1,0 +1,59 @@
+{
+  "id": "perl",
+  "name": "Perl",
+  "extensions": [
+    ".pl",
+    ".pm",
+    ".t",
+    ".pod"
+  ],
+  "keywords": [
+    "sub",
+    "my",
+    "our",
+    "local",
+    "use",
+    "no",
+    "package",
+    "require",
+    "return",
+    "BEGIN",
+    "END"
+  ],
+  "control": [
+    "if",
+    "elsif",
+    "else",
+    "unless",
+    "while",
+    "until",
+    "for",
+    "foreach",
+    "last",
+    "next",
+    "redo",
+    "do",
+    "and",
+    "or",
+    "not"
+  ],
+  "constants": [
+    "__END__",
+    "__DATA__",
+    "__FILE__",
+    "__LINE__"
+  ],
+  "definitionKeywords": [
+    "sub",
+    "package"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false,
+  "run": "perl {file}"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "python",
+  "name": "Python",
+  "extensions": [
+    ".py",
+    ".pyw",
+    ".pyi"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "multilineStrings": [
+    "\"\"\"",
+    "'''"
+  ],
+  "attributePrefix": "@",
+  "keywords": [
+    "def",
+    "class",
+    "lambda",
+    "import",
+    "from",
+    "as",
+    "global",
+    "nonlocal",
+    "with",
+    "async",
+    "await",
+    "del",
+    "pass",
+    "assert",
+    "yield"
+  ],
+  "control": [
+    "if",
+    "elif",
+    "else",
+    "for",
+    "while",
+    "in",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "except",
+    "finally",
+    "raise",
+    "and",
+    "or",
+    "not",
+    "is"
+  ],
+  "types": [
+    "int",
+    "float",
+    "str",
+    "bool",
+    "list",
+    "dict",
+    "set",
+    "tuple",
+    "bytes",
+    "object",
+    "type"
+  ],
+  "constants": [
+    "True",
+    "False",
+    "None",
+    "self",
+    "cls"
+  ],
+  "definitionKeywords": [
+    "def",
+    "class"
+  ],
+  "run": "python3 {file}",
+  "runWindows": "python {file}"
+}

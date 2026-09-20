@@ -1,0 +1,27 @@
+{
+  "id": "Zlib",
+  "name": "zlib License",
+  "category": "Permissive",
+  "summary": "Permissive with a small twist: you may not claim you wrote the original, and modified versions must be plainly marked as such. You don't need to include the license in compiled programs.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [
+    "document-changes",
+    "include-copyright--source"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/zlib/",
+  "matchAll": [
+    "this software is provided 'as-is', without any express or implied warranty",
+    "the origin of this software must not be misrepresented"
+  ],
+  "matchNone": []
+}

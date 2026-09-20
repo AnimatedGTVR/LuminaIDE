@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, macos-15, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install build tools (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y ninja-build cmake
+
+      - name: Install build tools (macOS)
+        if: runner.os == 'macOS'
+        run: brew install ninja
+
+      - name: MSVC environment (Windows)
+        if: runner.os == 'Windows'
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Rust tests (tokenizer, 89 language files, Markdown, agent runner)
+        run: cargo test --manifest-path core/Cargo.toml
+
+      - name: Build (Linux/macOS)
+        if: runner.os != 'Windows'
+        run: ./build.sh
+
+      - name: Build (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: ./build.ps1
+
+      - name: C# unit tests (settings, npm detection, fuzzy match, themes, quoting)
+        run: dotnet test tests/LuminaIDE.Tests --nologo -v q
+
+      - name: Self-test (native libraries, extensions, Markdown, shell)
+        run: dotnet app/bin/Release/net8.0/LuminaIDE.dll --selftest
+
+      - name: Build graphical launcher
+        run: dotnet build tools/Builder/Builder.csproj -c Release --nologo

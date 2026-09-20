@@ -1,0 +1,34 @@
+{
+  "name": "Graphite",
+  "type": "dark",
+  "ui": {
+    "background": "#1e1f22",
+    "sidebar": "#191a1d",
+    "activityBar": "#141517",
+    "panel": "#191a1d",
+    "input": "#141517",
+    "border": "#2e3035",
+    "foreground": "#d4d7dd",
+    "muted": "#7d8290",
+    "accent": "#4d9bf0",
+    "hover": "#2a2c31",
+    "selection": "#2f4a6d",
+    "lineHighlight": "#25272b",
+    "lineNumber": "#565b66",
+    "statusBar": "#22252a",
+    "statusBarText": "#c9ccd3"
+  },
+  "syntax": {
+    "keyword": "#c678dd",
+    "control": "#e06c75",
+    "type": "#e5c07b",
+    "function": "#61afef",
+    "definition": "#61afef",
+    "property": "#d4d7dd",
+    "string": "#98c379",
+    "number": "#d19a66",
+    "comment": "#6b7280",
+    "constant": "#d19a66",
+    "attribute": "#56b6c2"
+  }
+}

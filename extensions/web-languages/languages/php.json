@@ -1,0 +1,116 @@
+{
+  "id": "php",
+  "name": "PHP",
+  "extensions": [
+    ".php",
+    ".phtml",
+    ".php3",
+    ".php4",
+    ".php5",
+    ".phps"
+  ],
+  "keywords": [
+    "abstract",
+    "class",
+    "function",
+    "public",
+    "private",
+    "protected",
+    "static",
+    "final",
+    "namespace",
+    "use",
+    "extends",
+    "implements",
+    "new",
+    "var",
+    "const",
+    "echo",
+    "print",
+    "require",
+    "include",
+    "require_once",
+    "include_once",
+    "global",
+    "trait",
+    "interface",
+    "enum",
+    "readonly",
+    "fn",
+    "match",
+    "yield",
+    "insteadof",
+    "clone",
+    "instanceof"
+  ],
+  "control": [
+    "if",
+    "else",
+    "elseif",
+    "for",
+    "foreach",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "throw",
+    "goto",
+    "endif",
+    "endfor",
+    "endforeach",
+    "endwhile"
+  ],
+  "types": [
+    "int",
+    "float",
+    "string",
+    "bool",
+    "array",
+    "object",
+    "mixed",
+    "void",
+    "callable",
+    "iterable",
+    "self",
+    "parent",
+    "never"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "TRUE",
+    "FALSE",
+    "NULL"
+  ],
+  "definitionKeywords": [
+    "class",
+    "function",
+    "trait",
+    "interface",
+    "enum"
+  ],
+  "lineComments": [
+    "//",
+    "#"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "attributePrefix": "#[",
+  "run": "php {file}"
+}

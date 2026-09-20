@@ -1,0 +1,76 @@
+{
+  "id": "coffeescript",
+  "name": "CoffeeScript",
+  "extensions": [
+    ".coffee",
+    ".cson"
+  ],
+  "keywords": [
+    "class",
+    "extends",
+    "new",
+    "super",
+    "this",
+    "import",
+    "export",
+    "from",
+    "as",
+    "default",
+    "do",
+    "function"
+  ],
+  "control": [
+    "if",
+    "else",
+    "unless",
+    "then",
+    "switch",
+    "when",
+    "for",
+    "while",
+    "until",
+    "loop",
+    "in",
+    "of",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "throw",
+    "and",
+    "or",
+    "not",
+    "is",
+    "isnt"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "undefined",
+    "yes",
+    "no",
+    "on",
+    "off"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "blockComments": [
+    [
+      "###",
+      "###"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "multilineStrings": [
+    "\"\"\"",
+    "'''"
+  ],
+  "run": "coffee {file}"
+}

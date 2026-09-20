@@ -1,0 +1,66 @@
+{
+  "id": "racket",
+  "name": "Racket",
+  "extensions": [
+    ".rkt",
+    ".rktl",
+    ".scrbl"
+  ],
+  "keywords": [
+    "#lang",
+    "define",
+    "lambda",
+    "let",
+    "let*",
+    "letrec",
+    "struct",
+    "require",
+    "provide",
+    "module",
+    "define-syntax",
+    "define-values",
+    "begin",
+    "set!",
+    "λ"
+  ],
+  "control": [
+    "if",
+    "cond",
+    "case",
+    "when",
+    "unless",
+    "else",
+    "and",
+    "or",
+    "not",
+    "match",
+    "for"
+  ],
+  "constants": [
+    "#t",
+    "#f",
+    "#true",
+    "#false"
+  ],
+  "definitionKeywords": [
+    "define",
+    "define-syntax",
+    "struct"
+  ],
+  "lineComments": [
+    ";"
+  ],
+  "blockComments": [
+    [
+      "#|",
+      "|#"
+    ]
+  ],
+  "dashIdents": true,
+  "prefixCalls": true,
+  "pascalCaseTypes": false,
+  "strings": [
+    "\""
+  ],
+  "run": "racket {file}"
+}

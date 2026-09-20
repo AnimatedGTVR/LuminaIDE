@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
+    <AvaloniaUseCompiledBindingsByDefault>false</AvaloniaUseCompiledBindingsByDefault>
+    <RootNamespace>LuminaIDE</RootNamespace>
+    <Version>0.2.0</Version>
+    <Product>LuminaIDE</Product>
+    <Authors>Animated</Authors>
+    <Description>A small, fast code editor with a Markdown preview, npm/Vite tools and an AI agent panel.</Description>
+    <Copyright>Copyright (c) 2026 Animated</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <!-- No ICU dependency: the app starts on machines without libicu (minimal Linux images). -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <ApplicationIcon>Assets/icon.ico</ApplicationIcon>
+    <NoWarn>$(NoWarn);AVLN3001</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.2.7" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.7" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.7" />
+    <PackageReference Include="Avalonia.AvaloniaEdit" Version="11.1.0" />
+    <PackageReference Include="Avalonia.Svg.Skia" Version="11.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="LuminaIDE.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets/icon.png" />
+    <AvaloniaResource Include="Assets/Fonts/*.ttf" />
+  </ItemGroup>
+
+  <!-- Native libs produced by build.sh (Rust core + C++ terminal). -->
+  <ItemGroup>
+    <None Include="../build/lib/*.so;../build/lib/*.dylib;../build/lib/*.dll">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- Font licenses (OFL requires shipping them with the fonts). -->
+  <ItemGroup>
+    <None Include="Assets/Fonts/OFL-*.txt">
+      <Link>licenses/%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- Release notes, license and notices ship next to the executable (shown in-app). -->
+  <ItemGroup>
+    <None Include="../CHANGELOG.md;../LICENSE;../NOTICE">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- Built-in extensions ship next to the executable. -->
+  <ItemGroup>
+    <None Include="../extensions/**/*.json">
+      <Link>extensions/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

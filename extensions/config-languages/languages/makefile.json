@@ -1,0 +1,37 @@
+{
+  "id": "makefile",
+  "name": "Makefile",
+  "extensions": [
+    ".mk",
+    ".mak"
+  ],
+  "keywords": [
+    "ifeq",
+    "ifneq",
+    "ifdef",
+    "ifndef",
+    "else",
+    "endif",
+    "include",
+    "define",
+    "endef",
+    "export",
+    "override",
+    "vpath"
+  ],
+  "filenames": [
+    "Makefile",
+    "makefile",
+    "GNUmakefile"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "keyChars": ":=",
+  "pascalCaseTypes": false,
+  "run": "make"
+}

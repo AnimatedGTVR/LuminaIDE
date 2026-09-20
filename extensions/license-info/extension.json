@@ -1,0 +1,30 @@
+{
+  "name": "license-info",
+  "displayName": "License Guide",
+  "version": "0.1.0",
+  "description": "Open a LICENSE file and LuminaIDE tells you which license it is and, in plain language, what it allows. Covers MIT, MIT-0, ISC, 0BSD, BSD-2-Clause, BSD-3-Clause, Apache-2.0, Zlib, BSL-1.0, Unlicense, CC0-1.0, WTFPL, MPL-2.0, EPL-2.0, LGPL-2.1, LGPL-3.0, GPL-2.0, GPL-3.0, AGPL-3.0, OFL-1.1, CC-BY-4.0, CC-BY-SA-4.0.",
+  "licenses": [
+    "licenses/mit.json",
+    "licenses/mit-0.json",
+    "licenses/isc.json",
+    "licenses/0bsd.json",
+    "licenses/bsd-2-clause.json",
+    "licenses/bsd-3-clause.json",
+    "licenses/apache-2.0.json",
+    "licenses/zlib.json",
+    "licenses/bsl-1.0.json",
+    "licenses/unlicense.json",
+    "licenses/cc0-1.0.json",
+    "licenses/wtfpl.json",
+    "licenses/mpl-2.0.json",
+    "licenses/epl-2.0.json",
+    "licenses/lgpl-2.1.json",
+    "licenses/lgpl-3.0.json",
+    "licenses/gpl-2.0.json",
+    "licenses/gpl-3.0.json",
+    "licenses/agpl-3.0.json",
+    "licenses/ofl-1.1.json",
+    "licenses/cc-by-4.0.json",
+    "licenses/cc-by-sa-4.0.json"
+  ]
+}

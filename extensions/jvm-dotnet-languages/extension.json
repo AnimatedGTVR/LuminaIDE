@@ -1,0 +1,12 @@
+{
+  "name": "jvm-dotnet-languages",
+  "displayName": "JVM & .NET Languages",
+  "version": "0.1.0",
+  "description": "Syntax highlighting for Scala, Groovy, F#, Visual Basic.",
+  "languages": [
+    "languages/scala.json",
+    "languages/groovy.json",
+    "languages/fsharp.json",
+    "languages/vb.json"
+  ]
+}

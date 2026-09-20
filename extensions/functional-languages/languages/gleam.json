@@ -1,0 +1,56 @@
+{
+  "id": "gleam",
+  "name": "Gleam",
+  "extensions": [
+    ".gleam"
+  ],
+  "keywords": [
+    "import",
+    "pub",
+    "fn",
+    "type",
+    "const",
+    "opaque",
+    "let",
+    "assert",
+    "use",
+    "as",
+    "external"
+  ],
+  "control": [
+    "case",
+    "if",
+    "panic",
+    "todo"
+  ],
+  "types": [
+    "Int",
+    "Float",
+    "String",
+    "Bool",
+    "List",
+    "Result",
+    "Option",
+    "Nil",
+    "BitArray"
+  ],
+  "constants": [
+    "True",
+    "False",
+    "Nil",
+    "Ok",
+    "Error"
+  ],
+  "definitionKeywords": [
+    "fn",
+    "type",
+    "const"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "strings": [
+    "\""
+  ],
+  "run": "gleam run"
+}

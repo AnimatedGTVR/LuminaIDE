@@ -1,0 +1,11 @@
+build/
+target/
+bin/
+obj/
+publish/
+dist/
+*.log
+luminaide/
+
+# Local tooling
+__pycache__/

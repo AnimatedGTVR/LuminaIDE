@@ -1,0 +1,19 @@
+{
+  "id": "vue",
+  "name": "Vue",
+  "extensions": [
+    ".vue"
+  ],
+  "markup": true,
+  "blockComments": [
+    [
+      "<!--",
+      "-->"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false
+}

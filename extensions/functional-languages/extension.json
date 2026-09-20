@@ -1,0 +1,21 @@
+{
+  "name": "functional-languages",
+  "displayName": "Functional & Lisp Languages",
+  "version": "0.1.0",
+  "description": "Syntax highlighting for Haskell, OCaml, Elixir, Erlang, Elm, PureScript, Gleam, Common Lisp / Emacs Lisp, Scheme, Racket, Clojure, Lean, Prolog.",
+  "languages": [
+    "languages/haskell.json",
+    "languages/ocaml.json",
+    "languages/elixir.json",
+    "languages/erlang.json",
+    "languages/elm.json",
+    "languages/purescript.json",
+    "languages/gleam.json",
+    "languages/lisp.json",
+    "languages/scheme.json",
+    "languages/racket.json",
+    "languages/clojure.json",
+    "languages/lean.json",
+    "languages/prolog.json"
+  ]
+}

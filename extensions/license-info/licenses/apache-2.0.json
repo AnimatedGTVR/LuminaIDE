@@ -1,0 +1,31 @@
+{
+  "id": "Apache-2.0",
+  "name": "Apache License 2.0",
+  "category": "Permissive",
+  "summary": "A permissive license like MIT, plus an explicit patent grant: contributors license their patents to you, and that grant ends if you sue over patents in the software. You must keep notices and say what you changed.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "patent-use",
+    "private-use"
+  ],
+  "conditions": [
+    "include-copyright",
+    "document-changes"
+  ],
+  "limitations": [
+    "trademark-use",
+    "liability",
+    "warranty"
+  ],
+  "notes": [
+    "If the project ships a NOTICE file, you must pass it on with your distribution.",
+    "Generally considered incompatible with GPL-2.0-only, but compatible with GPL-3.0."
+  ],
+  "url": "https://choosealicense.com/licenses/apache-2.0/",
+  "matchAll": [
+    "apache license version 2.0"
+  ],
+  "matchNone": []
+}

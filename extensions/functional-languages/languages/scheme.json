@@ -1,0 +1,62 @@
+{
+  "id": "scheme",
+  "name": "Scheme",
+  "extensions": [
+    ".scm",
+    ".ss",
+    ".sld",
+    ".sls"
+  ],
+  "keywords": [
+    "define",
+    "define-syntax",
+    "define-record-type",
+    "let",
+    "let*",
+    "letrec",
+    "lambda",
+    "set!",
+    "begin",
+    "do",
+    "delay",
+    "import",
+    "library",
+    "quote"
+  ],
+  "control": [
+    "if",
+    "cond",
+    "case",
+    "when",
+    "unless",
+    "else",
+    "and",
+    "or",
+    "not"
+  ],
+  "constants": [
+    "#t",
+    "#f"
+  ],
+  "definitionKeywords": [
+    "define",
+    "define-syntax",
+    "define-record-type"
+  ],
+  "lineComments": [
+    ";"
+  ],
+  "blockComments": [
+    [
+      "#|",
+      "|#"
+    ]
+  ],
+  "dashIdents": true,
+  "prefixCalls": true,
+  "pascalCaseTypes": false,
+  "strings": [
+    "\""
+  ],
+  "run": "guile {file}"
+}

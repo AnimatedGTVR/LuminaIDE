@@ -1,0 +1,9 @@
+{
+  "name": "vanta-script",
+  "displayName": "Vanta Script",
+  "version": "0.1.0",
+  "description": "Highlighting for .vanta scripts: modules, func/let/mut, ::type annotations, # and #| |# comments, @use.",
+  "languages": [
+    "languages/vanta.json"
+  ]
+}

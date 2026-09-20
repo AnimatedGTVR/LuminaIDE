@@ -1,0 +1,26 @@
+{
+  "id": "MIT-0",
+  "name": "MIT No Attribution",
+  "category": "Permissive",
+  "summary": "Like the MIT License, but without the attribution requirement: you can use the code without keeping any notice.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/mit-0/",
+  "matchAll": [
+    "permission is hereby granted, free of charge, to any person obtaining a copy",
+    "the software is provided \"as is\", without warranty of any kind"
+  ],
+  "matchNone": [
+    "the above copyright notice and this permission notice shall be included"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Vanta Night",
+  "type": "dark",
+  "ui": {
+    "background": "#151821",
+    "sidebar": "#10131B",
+    "activityBar": "#0C0F16",
+    "panel": "#10131B",
+    "input": "#0C1018",
+    "border": "#2B3141",
+    "foreground": "#E8ECF4",
+    "muted": "#A0ABBE",
+    "accent": "#AC9BFF",
+    "hover": "#242A39",
+    "selection": "#383654",
+    "lineHighlight": "#1C2130",
+    "lineNumber": "#77839A",
+    "statusBar": "#10131B",
+    "statusBarText": "#A9B5C9"
+  },
+  "syntax": {
+    "keyword": "#ffb07c",
+    "control": "#feaca9",
+    "type": "#fea4e8",
+    "function": "#ffc9a8",
+    "definition": "#afbfff",
+    "property": "#d7d7e6",
+    "string": "#92cfa5",
+    "number": "#f1b595",
+    "comment": "#82819c",
+    "constant": "#f1b595",
+    "attribute": "#afbfff"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "pascal",
+  "name": "Pascal",
+  "extensions": [
+    ".pas",
+    ".pp",
+    ".dpr",
+    ".lpr"
+  ],
+  "keywords": [
+    "program",
+    "unit",
+    "uses",
+    "interface",
+    "implementation",
+    "type",
+    "var",
+    "const",
+    "procedure",
+    "function",
+    "begin",
+    "end",
+    "record",
+    "class",
+    "object",
+    "property",
+    "constructor",
+    "destructor",
+    "private",
+    "public",
+    "protected",
+    "published",
+    "inherited",
+    "override",
+    "virtual",
+    "abstract",
+    "array",
+    "of",
+    "set",
+    "file",
+    "packed",
+    "with",
+    "label"
+  ],
+  "control": [
+    "if",
+    "then",
+    "else",
+    "case",
+    "for",
+    "to",
+    "downto",
+    "do",
+    "while",
+    "repeat",
+    "until",
+    "exit",
+    "break",
+    "continue",
+    "try",
+    "except",
+    "finally",
+    "raise",
+    "and",
+    "or",
+    "not",
+    "xor",
+    "div",
+    "mod",
+    "in"
+  ],
+  "types": [
+    "Integer",
+    "Cardinal",
+    "Byte",
+    "Word",
+    "Boolean",
+    "Char",
+    "String",
+    "Real",
+    "Double",
+    "Single",
+    "Extended",
+    "Int64",
+    "Pointer",
+    "LongInt",
+    "ShortInt"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil"
+  ],
+  "definitionKeywords": [
+    "procedure",
+    "function",
+    "unit",
+    "program",
+    "constructor",
+    "destructor"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "{",
+      "}"
+    ],
+    [
+      "(*",
+      "*)"
+    ]
+  ],
+  "strings": [
+    "'"
+  ],
+  "caseInsensitive": true,
+  "pascalCaseTypes": false
+}

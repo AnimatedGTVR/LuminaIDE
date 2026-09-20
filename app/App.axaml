@@ -1,0 +1,227 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="LuminaIDE.App"
+             RequestedThemeVariant="Dark">
+  <Application.Resources>
+    <!-- Bundled, OFL-licensed fonts: the UI looks the same on every OS. -->
+    <FontFamily x:Key="UiFont">avares://LuminaIDE/Assets/Fonts#Inter</FontFamily>
+    <FontFamily x:Key="MonoFont">avares://LuminaIDE/Assets/Fonts#JetBrains Mono</FontFamily>
+  </Application.Resources>
+  <Application.Styles>
+    <FluentTheme />
+    <StyleInclude Source="avares://AvaloniaEdit/Themes/Fluent/AvaloniaEdit.xaml" />
+
+    <!-- Base -->
+    <Style Selector="Window">
+      <Setter Property="Background" Value="{DynamicResource Bg}" />
+      <Setter Property="Foreground" Value="{DynamicResource Fg}" />
+      <Setter Property="FontSize" Value="13" />
+      <Setter Property="FontFamily" Value="{DynamicResource UiFont}" />
+    </Style>
+    <Style Selector="TextBlock.muted"><Setter Property="Foreground" Value="{DynamicResource FgMuted}" /></Style>
+    <Style Selector="TextBlock.section">
+      <Setter Property="FontSize" Value="11" />
+      <Setter Property="FontWeight" Value="SemiBold" />
+      <Setter Property="LetterSpacing" Value="1" />
+      <Setter Property="Foreground" Value="{DynamicResource FgMuted}" />
+    </Style>
+    <Style Selector="TextBlock.status"><Setter Property="Foreground" Value="{DynamicResource FgStatus}" /></Style>
+    <Style Selector="TextBlock.accent"><Setter Property="Foreground" Value="{DynamicResource Accent}" /></Style>
+    <Style Selector="TextBlock.error"><Setter Property="Foreground" Value="#ff7a8a" /></Style>
+    <Style Selector="GridSplitter"><Setter Property="Background" Value="Transparent" /></Style>
+    <Style Selector="GridSplitter:pointerover"><Setter Property="Background" Value="{DynamicResource Border}" /></Style>
+    <Style Selector="TextBox">
+      <Setter Property="CornerRadius" Value="6" />
+      <Setter Property="Padding" Value="8,6" />
+      <Setter Property="MinHeight" Value="0" />
+    </Style>
+    <Style Selector="TreeView"><Setter Property="Background" Value="Transparent" /></Style>
+    <Style Selector="TreeViewItem"><Setter Property="MinHeight" Value="26" /><Setter Property="FocusAdorner" Value="{x:Null}" /></Style>
+    <Style Selector="ListBox"><Setter Property="Background" Value="Transparent" /></Style>
+    <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="{DynamicResource BgSelection}" /></Style>
+    <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="{DynamicResource BgHover}" /></Style>
+    <Style Selector="ListBoxItem:selected:pointerover /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Background" Value="{DynamicResource BgSelection}" /></Style>
+    <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresenter"><Setter Property="Foreground" Value="{DynamicResource Fg}" /></Style>
+    <Style Selector="ListBoxItem">
+      <Setter Property="Padding" Value="10,4" />
+      <Setter Property="CornerRadius" Value="5" />
+      <Setter Property="Margin" Value="4,1" />
+      <Setter Property="FocusAdorner" Value="{x:Null}" />
+    </Style>
+
+    <!-- Clickable rows / buttons built from Borders so they follow the theme exactly -->
+    <Style Selector="Border.item">
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="CornerRadius" Value="6" />
+      <Setter Property="Padding" Value="8,4" />
+      <Setter Property="Cursor" Value="Hand" />
+      <Setter Property="Transitions"><Transitions><BrushTransition Property="Background" Duration="0:0:0.12" /></Transitions></Setter>
+    </Style>
+
+    <!-- Square icon buttons for panel toolbars -->
+    <Style Selector="Border.iconbtn">
+      <Setter Property="Width" Value="26" /><Setter Property="Height" Value="26" />
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="CornerRadius" Value="6" />
+      <Setter Property="Cursor" Value="Hand" />
+      <Setter Property="Transitions"><Transitions><BrushTransition Property="Background" Duration="0:0:0.12" /></Transitions></Setter>
+    </Style>
+    <Style Selector="Border.iconbtn:pointerover"><Setter Property="Background" Value="{DynamicResource BgHover}" /></Style>
+    <Style Selector="Border.iconbtn Path">
+      <Setter Property="Stroke" Value="{DynamicResource FgMuted}" />
+      <Setter Property="StrokeThickness" Value="1.5" />
+      <Setter Property="StrokeLineCap" Value="Round" />
+      <Setter Property="StrokeJoin" Value="Round" />
+      <Setter Property="Width" Value="16" /><Setter Property="Height" Value="16" />
+      <Setter Property="Stretch" Value="Uniform" />
+      <Setter Property="HorizontalAlignment" Value="Center" /><Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="Border.iconbtn:pointerover Path"><Setter Property="Stroke" Value="{DynamicResource Fg}" /></Style>
+
+    <!-- File / folder icons -->
+    <Style Selector="Path.folder"><Setter Property="Stroke" Value="{DynamicResource Accent}" /><Setter Property="Fill" Value="{DynamicResource FolderFill}" /></Style>
+    <Style Selector="Path.folder-open"><Setter Property="Stroke" Value="{DynamicResource Accent}" /><Setter Property="Fill" Value="Transparent" /></Style>
+    <Style Selector="Path.page"><Setter Property="Stroke" Value="{DynamicResource FgMuted}" /></Style>
+    <Style Selector="Border.item:pointerover"><Setter Property="Background" Value="{DynamicResource BgHover}" /></Style>
+    <Style Selector="Border.item.status:pointerover"><Setter Property="Background" Value="#1Affffff" /></Style>
+
+    <Style Selector="Border.btn">
+      <Setter Property="Background" Value="{DynamicResource Accent}" />
+      <Setter Property="CornerRadius" Value="8" />
+      <Setter Property="Padding" Value="16,9" />
+      <Setter Property="Cursor" Value="Hand" />
+    </Style>
+    <Style Selector="Border.btn:pointerover"><Setter Property="Opacity" Value="0.88" /></Style>
+    <Style Selector="Border.btn > TextBlock"><Setter Property="Foreground" Value="{DynamicResource FgOnAccent}" /><Setter Property="FontWeight" Value="SemiBold" /></Style>
+
+    <Style Selector="Border.card">
+      <Setter Property="Background" Value="{DynamicResource BgPanel}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource Border}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="CornerRadius" Value="8" />
+      <Setter Property="Padding" Value="12,10" />
+    </Style>
+    <Style Selector="Border.license-banner">
+      <Setter Property="Background" Value="{DynamicResource BgPanel}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource Border}" />
+      <Setter Property="BorderThickness" Value="0,0,0,1" />
+    </Style>
+    <Style Selector="Border.divider"><Setter Property="Height" Value="1" /><Setter Property="Background" Value="{DynamicResource Border}" /><Setter Property="Opacity" Value="0.55" /></Style>
+    <Style Selector="Border.card">
+      <Setter Property="BoxShadow" Value="0 1 2 0 #22000000" />
+    </Style>
+    <Style Selector="Border.chip">
+      <Setter Property="BorderBrush" Value="{DynamicResource Border}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="CornerRadius" Value="10" />
+      <Setter Property="Padding" Value="12,6" />
+      <Setter Property="Cursor" Value="Hand" />
+    </Style>
+    <Style Selector="Border.chip:pointerover"><Setter Property="Background" Value="{DynamicResource BgHover}" /></Style>
+    <Style Selector="Border.chip.active"><Setter Property="BorderBrush" Value="{DynamicResource Accent}" /><Setter Property="Background" Value="{DynamicResource AccentSoft}" /></Style>
+    <Style Selector="Border.user">
+      <Setter Property="Background" Value="{DynamicResource AccentSoft}" />
+      <Setter Property="CornerRadius" Value="8" />
+      <Setter Property="Padding" Value="10,8" />
+    </Style>
+    <!-- Toggle switch and outlined button (settings page) -->
+    <Style Selector="Border.toggle"><Setter Property="Background" Value="{DynamicResource TileBorder}" /><Setter Property="Cursor" Value="Hand" /></Style>
+    <Style Selector="Border.toggle.on"><Setter Property="Background" Value="{DynamicResource Accent}" /></Style>
+    <Style Selector="Border.outline">
+      <Setter Property="BorderBrush" Value="{DynamicResource TileBorder}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="CornerRadius" Value="8" />
+      <Setter Property="Padding" Value="12,6" />
+      <Setter Property="Cursor" Value="Hand" />
+    </Style>
+    <Style Selector="Border.outline:pointerover"><Setter Property="Background" Value="{DynamicResource BgHover}" /></Style>
+
+    <!-- Floating surfaces: quick pick, menus -->
+    <Style Selector="Border.floating">
+      <Setter Property="Background" Value="{DynamicResource BgFloating}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource TileBorder}" />
+      <Setter Property="BoxShadow" Value="0 18 48 0 #66000000" />
+    </Style>
+
+    <!-- Solid cards with quiet hover feedback -->
+    <Style Selector="Border.tile">
+      <Setter Property="Background" Value="{DynamicResource TileBg}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource TileBorder}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="CornerRadius" Value="10" />
+      <Setter Property="Padding" Value="16,14" />
+      <Setter Property="Cursor" Value="Hand" />
+      <Setter Property="RenderTransform" Value="translateY(0px)" />
+      <Setter Property="Transitions">
+        <Transitions>
+          <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.14" />
+          <BrushTransition Property="Background" Duration="0:0:0.14" />
+        </Transitions>
+      </Setter>
+    </Style>
+    <Style Selector="Border.tile:pointerover">
+      <Setter Property="Background" Value="{DynamicResource TileBgHover}" />
+      <Setter Property="RenderTransform" Value="translateY(-2px)" />
+    </Style>
+    <Style Selector="Path.tile-icon"><Setter Property="Stroke" Value="{DynamicResource Accent}" /></Style>
+    <Style Selector="Border.tag">
+      <Setter Property="Background" Value="{DynamicResource BgHover}" />
+      <Setter Property="CornerRadius" Value="4" />
+      <Setter Property="Padding" Value="6,1" />
+    </Style>
+
+    <!-- Activity bar -->
+    <Style Selector="Border.act">
+      <Setter Property="Height" Value="46" />
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="BorderThickness" Value="2,0,0,0" />
+      <Setter Property="BorderBrush" Value="Transparent" />
+      <Setter Property="Cursor" Value="Hand" />
+    </Style>
+    <Style Selector="Border.act Path">
+      <Setter Property="Stroke" Value="{DynamicResource FgMuted}" />
+      <Setter Property="StrokeThickness" Value="1.6" />
+      <Setter Property="StrokeJoin" Value="Round" />
+      <Setter Property="StrokeLineCap" Value="Round" />
+      <Setter Property="HorizontalAlignment" Value="Center" />
+      <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style Selector="Border.act:pointerover Path"><Setter Property="Stroke" Value="{DynamicResource Fg}" /></Style>
+    <Style Selector="Border.act.active"><Setter Property="BorderBrush" Value="{DynamicResource Accent}" /></Style>
+    <Style Selector="Border.act.active Path"><Setter Property="Stroke" Value="{DynamicResource Fg}" /></Style>
+
+    <!-- Editor tabs -->
+    <Style Selector="Border.tab">
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="BorderBrush" Value="Transparent" />
+      <Setter Property="BorderThickness" Value="0,2,0,0" />
+      <Setter Property="Padding" Value="13,0,7,0" />
+      <Setter Property="MinHeight" Value="38" />
+      <Setter Property="Cursor" Value="Hand" />
+      <Setter Property="Transitions"><Transitions><BrushTransition Property="Background" Duration="0:0:0.12" /></Transitions></Setter>
+    </Style>
+    <Style Selector="Border.tab:pointerover"><Setter Property="Background" Value="{DynamicResource BgHover}" /></Style>
+    <Style Selector="Border.tab.active">
+      <Setter Property="Background" Value="{DynamicResource Bg}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource Accent}" />
+    </Style>
+    <Style Selector="Path.cross"><Setter Property="Stroke" Value="{DynamicResource FgMuted}" /></Style>
+    <Style Selector="Border.closebtn:pointerover Path.cross"><Setter Property="Stroke" Value="{DynamicResource Fg}" /></Style>
+    <Style Selector="Border.tab TextBlock.title"><Setter Property="Foreground" Value="{DynamicResource FgMuted}" /></Style>
+    <Style Selector="Border.tab:pointerover TextBlock.title"><Setter Property="Foreground" Value="{DynamicResource Fg}" /></Style>
+    <Style Selector="Border.tab.active TextBlock.title"><Setter Property="Foreground" Value="{DynamicResource Fg}" /></Style>
+
+    <!-- Close button: hidden until you hover the tab (or it is the active one); a dirty tab shows a dot instead -->
+    <Style Selector="Border.tab Border.closebtn"><Setter Property="Opacity" Value="0" /><Setter Property="IsHitTestVisible" Value="False" /></Style>
+    <Style Selector="Border.tab.active Border.closebtn"><Setter Property="Opacity" Value="0.7" /><Setter Property="IsHitTestVisible" Value="True" /></Style>
+    <Style Selector="Border.tab:pointerover Border.closebtn"><Setter Property="Opacity" Value="1" /><Setter Property="IsHitTestVisible" Value="True" /></Style>
+    <Style Selector="Border.tab.dirty Border.closebtn"><Setter Property="Opacity" Value="0" /></Style>
+    <Style Selector="Border.tab.dirty:pointerover Border.closebtn"><Setter Property="Opacity" Value="1" /></Style>
+    <Style Selector="TextBlock.dirtydot"><Setter Property="Opacity" Value="0" /></Style>
+    <Style Selector="Border.tab.dirty TextBlock.dirtydot"><Setter Property="Opacity" Value="1" /></Style>
+    <Style Selector="Border.tab.dirty:pointerover TextBlock.dirtydot"><Setter Property="Opacity" Value="0" /></Style>
+
+    <!-- Explorer rows: rounded selection with a little air -->
+    <Style Selector="TreeViewItem /template/ Border#PART_LayoutRoot"><Setter Property="CornerRadius" Value="6" /><Setter Property="Margin" Value="2,1" /></Style>
+  </Application.Styles>
+</Application>

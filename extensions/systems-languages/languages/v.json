@@ -1,0 +1,86 @@
+{
+  "id": "v",
+  "name": "V",
+  "extensions": [
+    ".vv"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "keywords": [
+    "fn",
+    "struct",
+    "enum",
+    "interface",
+    "module",
+    "import",
+    "const",
+    "mut",
+    "pub",
+    "type",
+    "union",
+    "unsafe",
+    "defer",
+    "shared",
+    "static",
+    "volatile",
+    "asm"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "match",
+    "in",
+    "return",
+    "break",
+    "continue",
+    "goto",
+    "or",
+    "select",
+    "lock",
+    "rlock",
+    "go"
+  ],
+  "types": [
+    "int",
+    "i8",
+    "i16",
+    "i64",
+    "u8",
+    "u16",
+    "u32",
+    "u64",
+    "f32",
+    "f64",
+    "bool",
+    "string",
+    "rune",
+    "byte",
+    "voidptr",
+    "any"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "none"
+  ],
+  "definitionKeywords": [
+    "fn",
+    "struct",
+    "enum",
+    "interface"
+  ],
+  "attributePrefix": "[",
+  "run": "v run {file}"
+}

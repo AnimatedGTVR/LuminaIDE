@@ -1,0 +1,66 @@
+{
+  "id": "protobuf",
+  "name": "Protocol Buffers",
+  "extensions": [
+    ".proto"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "syntax",
+    "package",
+    "import",
+    "option",
+    "message",
+    "enum",
+    "service",
+    "rpc",
+    "returns",
+    "oneof",
+    "map",
+    "reserved",
+    "extend",
+    "extensions",
+    "stream",
+    "repeated",
+    "optional",
+    "required"
+  ],
+  "types": [
+    "double",
+    "float",
+    "int32",
+    "int64",
+    "uint32",
+    "uint64",
+    "sint32",
+    "sint64",
+    "fixed32",
+    "fixed64",
+    "sfixed32",
+    "sfixed64",
+    "bool",
+    "string",
+    "bytes"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "definitionKeywords": [
+    "message",
+    "enum",
+    "service",
+    "rpc"
+  ]
+}

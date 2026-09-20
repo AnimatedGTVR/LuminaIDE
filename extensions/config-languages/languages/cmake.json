@@ -1,0 +1,65 @@
+{
+  "id": "cmake",
+  "name": "CMake",
+  "extensions": [
+    ".cmake"
+  ],
+  "keywords": [
+    "cmake_minimum_required",
+    "project",
+    "add_executable",
+    "add_library",
+    "target_link_libraries",
+    "target_include_directories",
+    "target_compile_options",
+    "set",
+    "option",
+    "include",
+    "find_package",
+    "add_subdirectory",
+    "install",
+    "function",
+    "endfunction",
+    "macro",
+    "endmacro",
+    "file",
+    "message",
+    "list",
+    "string",
+    "add_definitions"
+  ],
+  "control": [
+    "if",
+    "elseif",
+    "else",
+    "endif",
+    "foreach",
+    "endforeach",
+    "while",
+    "endwhile",
+    "return"
+  ],
+  "constants": [
+    "ON",
+    "OFF",
+    "TRUE",
+    "FALSE"
+  ],
+  "filenames": [
+    "CMakeLists.txt"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "blockComments": [
+    [
+      "#[[",
+      "]]"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "caseInsensitive": true,
+  "pascalCaseTypes": false
+}

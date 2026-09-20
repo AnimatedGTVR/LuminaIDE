@@ -1,0 +1,28 @@
+{
+  "id": "MIT",
+  "name": "MIT License",
+  "category": "Permissive",
+  "summary": "A short, permissive license. You can do almost anything with the code, including using it in closed-source commercial products, as long as you keep the copyright notice and license text with it.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [
+    "include-copyright"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [
+    "One of the most widely used licenses, and compatible with almost every other license."
+  ],
+  "url": "https://choosealicense.com/licenses/mit/",
+  "matchAll": [
+    "permission is hereby granted, free of charge, to any person obtaining a copy",
+    "the above copyright notice and this permission notice shall be included in all copies or substantial portions of the software"
+  ],
+  "matchNone": []
+}

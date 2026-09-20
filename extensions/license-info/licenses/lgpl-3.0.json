@@ -1,0 +1,29 @@
+{
+  "id": "LGPL-3.0",
+  "name": "GNU Lesser General Public License v3.0",
+  "category": "Weak copyleft (library)",
+  "summary": "Designed for libraries: you can link it into programs under any license (even proprietary), but changes to the library itself must be shared under the LGPL. Adds an explicit patent grant over version 2.1.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "patent-use",
+    "private-use"
+  ],
+  "conditions": [
+    "disclose-source",
+    "include-copyright",
+    "document-changes",
+    "same-license--library"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/lgpl-3.0/",
+  "matchAll": [
+    "gnu lesser general public license version 3"
+  ],
+  "matchNone": []
+}

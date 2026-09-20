@@ -1,0 +1,121 @@
+{
+  "id": "csharp",
+  "name": "C#",
+  "extensions": [
+    ".cs"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "preprocessor": true,
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "keywords": [
+    "using",
+    "namespace",
+    "class",
+    "struct",
+    "interface",
+    "enum",
+    "record",
+    "delegate",
+    "event",
+    "public",
+    "private",
+    "protected",
+    "internal",
+    "static",
+    "readonly",
+    "const",
+    "virtual",
+    "override",
+    "abstract",
+    "sealed",
+    "partial",
+    "async",
+    "await",
+    "new",
+    "var",
+    "get",
+    "set",
+    "init",
+    "out",
+    "ref",
+    "in",
+    "is",
+    "as",
+    "params",
+    "unsafe",
+    "extern"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "foreach",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "goto",
+    "try",
+    "catch",
+    "finally",
+    "throw",
+    "yield",
+    "when"
+  ],
+  "types": [
+    "int",
+    "uint",
+    "long",
+    "ulong",
+    "short",
+    "ushort",
+    "byte",
+    "sbyte",
+    "float",
+    "double",
+    "decimal",
+    "bool",
+    "char",
+    "string",
+    "object",
+    "void",
+    "dynamic",
+    "String",
+    "List",
+    "Dictionary",
+    "Task"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "this",
+    "base"
+  ],
+  "definitionKeywords": [
+    "class",
+    "struct",
+    "interface",
+    "enum",
+    "record",
+    "namespace"
+  ],
+  "run": "dotnet run"
+}

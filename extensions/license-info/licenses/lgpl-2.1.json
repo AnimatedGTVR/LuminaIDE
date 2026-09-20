@@ -1,0 +1,30 @@
+{
+  "id": "LGPL-2.1",
+  "name": "GNU Lesser General Public License v2.1",
+  "category": "Weak copyleft (library)",
+  "summary": "Designed for libraries: you can link it into programs under any license (even proprietary), but changes to the library itself must be shared under the LGPL.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [
+    "disclose-source",
+    "include-copyright",
+    "document-changes",
+    "same-license--library"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [
+    "If you distribute a program that uses the library, users must be able to replace the library with their own modified version."
+  ],
+  "url": "https://choosealicense.com/licenses/lgpl-2.1/",
+  "matchAll": [
+    "gnu lesser general public license version 2.1"
+  ],
+  "matchNone": []
+}

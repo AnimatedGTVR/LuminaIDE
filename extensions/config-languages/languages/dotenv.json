@@ -1,0 +1,27 @@
+{
+  "id": "dotenv",
+  "name": "Dotenv",
+  "extensions": [
+    ".env"
+  ],
+  "keywords": [
+    "export"
+  ],
+  "filenames": [
+    ".env",
+    ".env.local",
+    ".env.development",
+    ".env.production",
+    ".env.test",
+    ".env.example"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "keyChars": "=",
+  "pascalCaseTypes": false
+}

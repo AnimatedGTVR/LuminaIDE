@@ -1,0 +1,39 @@
+{
+  "id": "diff",
+  "name": "Diff / Patch",
+  "extensions": [
+    ".diff",
+    ".patch"
+  ],
+  "pascalCaseTypes": false,
+  "linePrefixes": [
+    [
+      "+++",
+      "comment"
+    ],
+    [
+      "---",
+      "comment"
+    ],
+    [
+      "diff ",
+      "comment"
+    ],
+    [
+      "index ",
+      "comment"
+    ],
+    [
+      "@@",
+      "attribute"
+    ],
+    [
+      "+",
+      "string"
+    ],
+    [
+      "-",
+      "control"
+    ]
+  ]
+}

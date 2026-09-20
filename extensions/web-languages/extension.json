@@ -1,0 +1,19 @@
+{
+  "name": "web-languages",
+  "displayName": "Web Languages",
+  "version": "0.1.0",
+  "description": "HTML, CSS, SCSS, Less, XML, Vue, Svelte, Astro, GraphQL, PHP and CoffeeScript.",
+  "languages": [
+    "languages/html.json",
+    "languages/css.json",
+    "languages/scss.json",
+    "languages/less.json",
+    "languages/xml.json",
+    "languages/vue.json",
+    "languages/svelte.json",
+    "languages/astro.json",
+    "languages/graphql.json",
+    "languages/php.json",
+    "languages/coffeescript.json"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "ruby",
+  "name": "Ruby",
+  "extensions": [
+    ".rb",
+    ".rake",
+    ".gemspec",
+    ".ru",
+    ".rbw"
+  ],
+  "keywords": [
+    "def",
+    "class",
+    "module",
+    "end",
+    "include",
+    "extend",
+    "require",
+    "require_relative",
+    "attr_accessor",
+    "attr_reader",
+    "attr_writer",
+    "alias",
+    "undef",
+    "self",
+    "private",
+    "public",
+    "protected",
+    "begin",
+    "rescue",
+    "ensure",
+    "raise",
+    "yield",
+    "lambda",
+    "proc"
+  ],
+  "control": [
+    "if",
+    "elsif",
+    "else",
+    "unless",
+    "case",
+    "when",
+    "then",
+    "while",
+    "until",
+    "for",
+    "in",
+    "do",
+    "return",
+    "break",
+    "next",
+    "redo",
+    "retry",
+    "and",
+    "or",
+    "not"
+  ],
+  "types": [
+    "String",
+    "Integer",
+    "Float",
+    "Array",
+    "Hash",
+    "Symbol",
+    "Proc",
+    "Range",
+    "Struct",
+    "Comparable",
+    "Enumerable"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil"
+  ],
+  "definitionKeywords": [
+    "def",
+    "class",
+    "module"
+  ],
+  "filenames": [
+    "Rakefile",
+    "Gemfile",
+    "Guardfile",
+    "Vagrantfile"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "run": "ruby {file}"
+}

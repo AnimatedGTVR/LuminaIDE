@@ -1,0 +1,131 @@
+{
+  "id": "swift",
+  "name": "Swift",
+  "extensions": [
+    ".swift"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "import",
+    "class",
+    "struct",
+    "enum",
+    "protocol",
+    "extension",
+    "func",
+    "var",
+    "let",
+    "init",
+    "deinit",
+    "subscript",
+    "typealias",
+    "associatedtype",
+    "static",
+    "public",
+    "private",
+    "internal",
+    "fileprivate",
+    "open",
+    "final",
+    "override",
+    "mutating",
+    "nonmutating",
+    "lazy",
+    "weak",
+    "unowned",
+    "inout",
+    "throws",
+    "rethrows",
+    "async",
+    "await",
+    "actor",
+    "where",
+    "is",
+    "as",
+    "in",
+    "some",
+    "any",
+    "convenience",
+    "required"
+  ],
+  "control": [
+    "if",
+    "else",
+    "guard",
+    "switch",
+    "case",
+    "default",
+    "for",
+    "while",
+    "repeat",
+    "return",
+    "break",
+    "continue",
+    "defer",
+    "do",
+    "try",
+    "catch",
+    "throw",
+    "fallthrough"
+  ],
+  "types": [
+    "Int",
+    "Int8",
+    "Int16",
+    "Int32",
+    "Int64",
+    "UInt",
+    "UInt8",
+    "UInt16",
+    "UInt32",
+    "UInt64",
+    "Double",
+    "Float",
+    "Bool",
+    "String",
+    "Character",
+    "Array",
+    "Dictionary",
+    "Set",
+    "Optional",
+    "Any",
+    "AnyObject",
+    "Void",
+    "Never",
+    "Result"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil",
+    "self",
+    "Self",
+    "super"
+  ],
+  "definitionKeywords": [
+    "func",
+    "class",
+    "struct",
+    "enum",
+    "protocol",
+    "extension",
+    "actor",
+    "typealias"
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "attributePrefix": "@",
+  "run": "swift {file}"
+}

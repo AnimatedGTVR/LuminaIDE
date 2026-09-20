@@ -1,0 +1,97 @@
+{
+  "id": "julia",
+  "name": "Julia",
+  "extensions": [
+    ".jl"
+  ],
+  "keywords": [
+    "function",
+    "macro",
+    "module",
+    "baremodule",
+    "struct",
+    "mutable",
+    "abstract",
+    "primitive",
+    "type",
+    "using",
+    "import",
+    "export",
+    "const",
+    "global",
+    "local",
+    "let",
+    "begin",
+    "end",
+    "where",
+    "quote",
+    "do"
+  ],
+  "control": [
+    "if",
+    "elseif",
+    "else",
+    "for",
+    "while",
+    "in",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "throw"
+  ],
+  "types": [
+    "Int",
+    "Int8",
+    "Int16",
+    "Int32",
+    "Int64",
+    "UInt",
+    "Float32",
+    "Float64",
+    "Bool",
+    "String",
+    "Char",
+    "Vector",
+    "Array",
+    "Dict",
+    "Set",
+    "Nothing",
+    "Any",
+    "Number",
+    "Real",
+    "Tuple"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nothing",
+    "missing",
+    "pi"
+  ],
+  "definitionKeywords": [
+    "function",
+    "struct",
+    "module",
+    "macro"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "blockComments": [
+    [
+      "#=",
+      "=#"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "attributePrefix": "@",
+  "run": "julia {file}"
+}

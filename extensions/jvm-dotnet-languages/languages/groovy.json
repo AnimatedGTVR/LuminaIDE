@@ -1,0 +1,100 @@
+{
+  "id": "groovy",
+  "name": "Groovy",
+  "extensions": [
+    ".groovy",
+    ".gradle",
+    ".gvy"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "keywords": [
+    "def",
+    "class",
+    "interface",
+    "enum",
+    "trait",
+    "extends",
+    "implements",
+    "import",
+    "package",
+    "static",
+    "final",
+    "abstract",
+    "public",
+    "private",
+    "protected",
+    "new",
+    "var",
+    "as",
+    "in",
+    "instanceof",
+    "native",
+    "synchronized"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "throw",
+    "assert"
+  ],
+  "types": [
+    "int",
+    "long",
+    "short",
+    "byte",
+    "float",
+    "double",
+    "boolean",
+    "char",
+    "String",
+    "Object",
+    "List",
+    "Map",
+    "Set",
+    "Closure"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "this",
+    "super"
+  ],
+  "definitionKeywords": [
+    "class",
+    "interface",
+    "enum",
+    "trait",
+    "def"
+  ],
+  "multilineStrings": [
+    "\"\"\"",
+    "'''"
+  ],
+  "attributePrefix": "@",
+  "run": "groovy {file}"
+}

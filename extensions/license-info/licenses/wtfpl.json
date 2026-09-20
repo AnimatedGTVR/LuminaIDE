@@ -1,0 +1,23 @@
+{
+  "id": "WTFPL",
+  "name": "Do What The F*ck You Want To Public License",
+  "category": "Public domain-like",
+  "summary": "Extremely informal: do whatever you want with the work.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [],
+  "limitations": [],
+  "notes": [
+    "It has no warranty disclaimer, so some companies avoid it.",
+    "Because of its wording, some organizations won't accept it."
+  ],
+  "url": "https://spdx.org/licenses/WTFPL.html",
+  "matchAll": [
+    "do what the fuck you want to public license"
+  ],
+  "matchNone": []
+}

@@ -1,0 +1,99 @@
+{
+  "id": "java",
+  "name": "Java",
+  "extensions": [
+    ".java"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "attributePrefix": "@",
+  "keywords": [
+    "package",
+    "import",
+    "class",
+    "interface",
+    "enum",
+    "record",
+    "extends",
+    "implements",
+    "public",
+    "private",
+    "protected",
+    "static",
+    "final",
+    "abstract",
+    "synchronized",
+    "volatile",
+    "transient",
+    "native",
+    "new",
+    "var",
+    "instanceof",
+    "throws",
+    "void"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "throw",
+    "yield"
+  ],
+  "types": [
+    "int",
+    "long",
+    "short",
+    "byte",
+    "float",
+    "double",
+    "boolean",
+    "char",
+    "String",
+    "Object",
+    "List",
+    "Map",
+    "Set",
+    "Integer",
+    "Long",
+    "Double",
+    "Boolean"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "this",
+    "super"
+  ],
+  "definitionKeywords": [
+    "class",
+    "interface",
+    "enum",
+    "record"
+  ],
+  "run": "java {file}"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "awk",
+  "name": "AWK",
+  "extensions": [
+    ".awk"
+  ],
+  "keywords": [
+    "function",
+    "BEGIN",
+    "END",
+    "getline",
+    "next",
+    "nextfile",
+    "delete",
+    "in"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "break",
+    "continue",
+    "exit",
+    "return"
+  ],
+  "types": [
+    "NR",
+    "NF",
+    "FS",
+    "OFS",
+    "RS",
+    "ORS",
+    "FILENAME",
+    "FNR",
+    "RSTART",
+    "RLENGTH",
+    "SUBSEP",
+    "ENVIRON",
+    "ARGC",
+    "ARGV"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\""
+  ],
+  "pascalCaseTypes": false,
+  "run": "awk -f {file}"
+}

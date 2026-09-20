@@ -1,0 +1,70 @@
+{
+  "id": "powershell",
+  "name": "PowerShell",
+  "extensions": [
+    ".ps1",
+    ".psm1",
+    ".psd1"
+  ],
+  "keywords": [
+    "function",
+    "filter",
+    "param",
+    "begin",
+    "process",
+    "end",
+    "class",
+    "enum",
+    "using",
+    "workflow"
+  ],
+  "control": [
+    "if",
+    "elseif",
+    "else",
+    "switch",
+    "foreach",
+    "for",
+    "while",
+    "do",
+    "until",
+    "break",
+    "continue",
+    "return",
+    "throw",
+    "try",
+    "catch",
+    "finally",
+    "trap",
+    "exit"
+  ],
+  "constants": [
+    "$true",
+    "$false",
+    "$null"
+  ],
+  "definitionKeywords": [
+    "function",
+    "filter",
+    "class",
+    "enum"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "blockComments": [
+    [
+      "<#",
+      "#>"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "caseInsensitive": true,
+  "pascalCaseTypes": false,
+  "dashIdents": true,
+  "run": "pwsh {file}",
+  "runWindows": "powershell -NoProfile -File {file}"
+}

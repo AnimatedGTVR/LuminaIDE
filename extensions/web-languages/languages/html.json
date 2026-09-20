@@ -1,0 +1,26 @@
+{
+  "id": "html",
+  "name": "HTML",
+  "extensions": [
+    ".html",
+    ".htm",
+    ".xhtml",
+    ".jsp",
+    ".ejs"
+  ],
+  "markup": true,
+  "blockComments": [
+    [
+      "<!--",
+      "-->"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false,
+  "run": "xdg-open {file}",
+  "runMac": "open {file}",
+  "runWindows": "start \"\" {file}"
+}

@@ -1,0 +1,123 @@
+{
+  "id": "nim",
+  "name": "Nim",
+  "extensions": [
+    ".nim",
+    ".nims",
+    ".nimble"
+  ],
+  "keywords": [
+    "proc",
+    "func",
+    "method",
+    "iterator",
+    "template",
+    "macro",
+    "converter",
+    "type",
+    "var",
+    "let",
+    "const",
+    "import",
+    "from",
+    "include",
+    "export",
+    "as",
+    "when",
+    "of",
+    "object",
+    "tuple",
+    "enum",
+    "ref",
+    "ptr",
+    "distinct",
+    "concept",
+    "mixin",
+    "bind",
+    "using",
+    "static"
+  ],
+  "control": [
+    "if",
+    "elif",
+    "else",
+    "case",
+    "for",
+    "while",
+    "block",
+    "break",
+    "continue",
+    "return",
+    "yield",
+    "discard",
+    "try",
+    "except",
+    "finally",
+    "raise",
+    "defer",
+    "in",
+    "notin",
+    "is",
+    "isnot",
+    "and",
+    "or",
+    "not",
+    "xor"
+  ],
+  "types": [
+    "int",
+    "int8",
+    "int16",
+    "int32",
+    "int64",
+    "uint",
+    "uint8",
+    "uint16",
+    "uint32",
+    "uint64",
+    "float",
+    "float32",
+    "float64",
+    "bool",
+    "char",
+    "string",
+    "seq",
+    "array",
+    "set",
+    "cstring",
+    "void",
+    "auto"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil"
+  ],
+  "definitionKeywords": [
+    "proc",
+    "func",
+    "method",
+    "iterator",
+    "template",
+    "macro",
+    "type",
+    "converter"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "blockComments": [
+    [
+      "#[",
+      "]#"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "pascalCaseTypes": true,
+  "run": "nim r {file}"
+}

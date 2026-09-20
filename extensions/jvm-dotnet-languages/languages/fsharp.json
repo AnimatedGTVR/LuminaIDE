@@ -1,0 +1,106 @@
+{
+  "id": "fsharp",
+  "name": "F#",
+  "extensions": [
+    ".fs",
+    ".fsi",
+    ".fsx"
+  ],
+  "keywords": [
+    "let",
+    "mutable",
+    "rec",
+    "and",
+    "in",
+    "do",
+    "module",
+    "namespace",
+    "open",
+    "type",
+    "of",
+    "fun",
+    "function",
+    "member",
+    "abstract",
+    "override",
+    "interface",
+    "inherit",
+    "new",
+    "val",
+    "static",
+    "private",
+    "public",
+    "internal",
+    "inline",
+    "lazy",
+    "async",
+    "use",
+    "yield",
+    "begin",
+    "end",
+    "done"
+  ],
+  "control": [
+    "if",
+    "then",
+    "elif",
+    "else",
+    "match",
+    "with",
+    "for",
+    "to",
+    "downto",
+    "while",
+    "try",
+    "finally",
+    "raise",
+    "return",
+    "failwith"
+  ],
+  "types": [
+    "int",
+    "float",
+    "double",
+    "bool",
+    "string",
+    "char",
+    "unit",
+    "list",
+    "array",
+    "seq",
+    "option",
+    "byte",
+    "int64",
+    "uint32",
+    "decimal",
+    "obj"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null"
+  ],
+  "definitionKeywords": [
+    "let",
+    "type",
+    "module",
+    "member"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "(*",
+      "*)"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "attributePrefix": "[<",
+  "run": "dotnet fsi {file}"
+}

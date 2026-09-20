@@ -1,0 +1,99 @@
+{
+  "id": "ocaml",
+  "name": "OCaml",
+  "extensions": [
+    ".ml",
+    ".mli",
+    ".mll",
+    ".mly"
+  ],
+  "keywords": [
+    "let",
+    "rec",
+    "and",
+    "in",
+    "module",
+    "struct",
+    "sig",
+    "end",
+    "open",
+    "include",
+    "type",
+    "val",
+    "external",
+    "functor",
+    "exception",
+    "mutable",
+    "fun",
+    "function",
+    "of",
+    "as",
+    "when",
+    "constraint",
+    "lazy",
+    "new",
+    "object",
+    "method",
+    "inherit",
+    "initializer",
+    "virtual",
+    "private",
+    "nonrec"
+  ],
+  "control": [
+    "if",
+    "then",
+    "else",
+    "match",
+    "with",
+    "for",
+    "to",
+    "downto",
+    "while",
+    "do",
+    "done",
+    "begin",
+    "try",
+    "raise",
+    "assert"
+  ],
+  "types": [
+    "int",
+    "float",
+    "bool",
+    "char",
+    "string",
+    "unit",
+    "list",
+    "array",
+    "option",
+    "ref",
+    "exn",
+    "bytes",
+    "int32",
+    "int64"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "None",
+    "Some"
+  ],
+  "definitionKeywords": [
+    "let",
+    "type",
+    "module",
+    "val",
+    "external"
+  ],
+  "blockComments": [
+    [
+      "(*",
+      "*)"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "run": "ocaml {file}"
+}

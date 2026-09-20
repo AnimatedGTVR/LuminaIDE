@@ -1,0 +1,118 @@
+{
+  "id": "typescript",
+  "name": "TypeScript",
+  "extensions": [
+    ".ts",
+    ".tsx",
+    ".mts",
+    ".cts"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "multilineStrings": [
+    "`"
+  ],
+  "keywords": [
+    "function",
+    "class",
+    "interface",
+    "type",
+    "enum",
+    "namespace",
+    "declare",
+    "abstract",
+    "implements",
+    "extends",
+    "const",
+    "let",
+    "var",
+    "import",
+    "export",
+    "from",
+    "as",
+    "new",
+    "typeof",
+    "instanceof",
+    "keyof",
+    "readonly",
+    "public",
+    "private",
+    "protected",
+    "static",
+    "async",
+    "await",
+    "get",
+    "set",
+    "of",
+    "in",
+    "is",
+    "satisfies"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "case",
+    "default",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "finally",
+    "throw",
+    "yield"
+  ],
+  "types": [
+    "string",
+    "number",
+    "boolean",
+    "any",
+    "unknown",
+    "never",
+    "void",
+    "object",
+    "bigint",
+    "symbol",
+    "Array",
+    "Promise",
+    "Record",
+    "Partial",
+    "Map",
+    "Set",
+    "Date"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "undefined",
+    "this",
+    "super",
+    "NaN",
+    "Infinity"
+  ],
+  "definitionKeywords": [
+    "function",
+    "class",
+    "interface",
+    "type",
+    "enum",
+    "namespace"
+  ],
+  "run": "npx --yes tsx {file}"
+}

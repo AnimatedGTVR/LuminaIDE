@@ -1,0 +1,25 @@
+{
+  "id": "0BSD",
+  "name": "BSD Zero Clause License",
+  "category": "Public domain-like",
+  "summary": "A permissive license with no conditions at all: use the code however you like, with no attribution required.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "private-use"
+  ],
+  "conditions": [],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://spdx.org/licenses/0BSD.html",
+  "matchAll": [
+    "permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted"
+  ],
+  "matchNone": [
+    "provided that the above copyright notice"
+  ]
+}

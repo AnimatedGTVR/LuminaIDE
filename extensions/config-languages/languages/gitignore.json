@@ -1,0 +1,22 @@
+{
+  "id": "gitignore",
+  "name": "Ignore file",
+  "extensions": [
+    ".gitignore",
+    ".dockerignore",
+    ".npmignore",
+    ".prettierignore",
+    ".eslintignore"
+  ],
+  "filenames": [
+    ".gitignore",
+    ".dockerignore",
+    ".npmignore",
+    ".prettierignore",
+    ".eslintignore"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "pascalCaseTypes": false
+}

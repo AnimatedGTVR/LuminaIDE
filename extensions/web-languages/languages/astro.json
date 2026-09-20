@@ -1,0 +1,19 @@
+{
+  "id": "astro",
+  "name": "Astro",
+  "extensions": [
+    ".astro"
+  ],
+  "markup": true,
+  "blockComments": [
+    [
+      "<!--",
+      "-->"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false
+}

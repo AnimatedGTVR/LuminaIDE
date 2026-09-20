@@ -1,0 +1,61 @@
+{
+  "id": "graphql",
+  "name": "GraphQL",
+  "extensions": [
+    ".graphql",
+    ".gql"
+  ],
+  "keywords": [
+    "query",
+    "mutation",
+    "subscription",
+    "fragment",
+    "on",
+    "type",
+    "interface",
+    "enum",
+    "union",
+    "input",
+    "scalar",
+    "schema",
+    "extend",
+    "directive",
+    "implements",
+    "repeatable"
+  ],
+  "types": [
+    "Int",
+    "Float",
+    "String",
+    "Boolean",
+    "ID"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null"
+  ],
+  "definitionKeywords": [
+    "type",
+    "interface",
+    "enum",
+    "union",
+    "input",
+    "scalar",
+    "fragment",
+    "query",
+    "mutation",
+    "subscription"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\""
+  ],
+  "multilineStrings": [
+    "\"\"\""
+  ],
+  "keyChars": ":",
+  "pascalCaseTypes": true
+}

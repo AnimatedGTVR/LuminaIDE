@@ -1,0 +1,56 @@
+{
+  "id": "vanta",
+  "name": "Vanta Script",
+  "extensions": [
+    ".vanta"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "blockComments": [
+    [
+      "#|",
+      "|#"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "attributePrefix": "@",
+  "pascalCaseTypes": false,
+  "keywords": [
+    "module",
+    "pub",
+    "func",
+    "let",
+    "mut",
+    "if",
+    "else",
+    "for",
+    "in",
+    "by",
+    "while",
+    "ask",
+    "use"
+  ],
+  "control": [
+    "return",
+    "break",
+    "skip"
+  ],
+  "types": [
+    "int",
+    "float",
+    "bool",
+    "string",
+    "void"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "definitionKeywords": [
+    "func"
+  ],
+  "run": "vanta run {file}"
+}

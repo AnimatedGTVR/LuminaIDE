@@ -1,0 +1,20 @@
+{
+  "name": "config-languages",
+  "displayName": "Config & Data Formats",
+  "version": "0.1.0",
+  "description": "Syntax highlighting for Dockerfile, Makefile, CMake, INI / Config, Java Properties, Dotenv, Terraform / HCL, Protocol Buffers, Diff / Patch, Ignore file, Nginx, LaTeX.",
+  "languages": [
+    "languages/dockerfile.json",
+    "languages/makefile.json",
+    "languages/cmake.json",
+    "languages/ini.json",
+    "languages/properties.json",
+    "languages/dotenv.json",
+    "languages/terraform.json",
+    "languages/protobuf.json",
+    "languages/diff.json",
+    "languages/gitignore.json",
+    "languages/nginx.json",
+    "languages/latex.json"
+  ]
+}

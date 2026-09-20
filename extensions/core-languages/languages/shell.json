@@ -1,0 +1,56 @@
+{
+  "id": "shell",
+  "name": "Shell",
+  "extensions": [
+    ".sh",
+    ".bash",
+    ".zsh"
+  ],
+  "filenames": [
+    ".bashrc",
+    ".zshrc",
+    ".profile"
+  ],
+  "lineComments": [
+    "#"
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "pascalCaseTypes": false,
+  "keywords": [
+    "function",
+    "local",
+    "export",
+    "readonly",
+    "declare",
+    "source",
+    "alias",
+    "unset"
+  ],
+  "control": [
+    "if",
+    "then",
+    "elif",
+    "else",
+    "fi",
+    "for",
+    "while",
+    "until",
+    "do",
+    "done",
+    "case",
+    "esac",
+    "in",
+    "return",
+    "break",
+    "continue",
+    "exit"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "run": "bash {file}"
+}

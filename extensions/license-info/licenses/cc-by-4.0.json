@@ -1,0 +1,30 @@
+{
+  "id": "CC-BY-4.0",
+  "name": "Creative Commons Attribution 4.0",
+  "category": "Creative Commons",
+  "summary": "Free to share and adapt for any purpose, even commercially, as long as you give credit and say if you made changes.",
+  "permissions": [
+    "commercial-use",
+    "distribution",
+    "modifications",
+    "private-use"
+  ],
+  "conditions": [
+    "include-copyright",
+    "document-changes"
+  ],
+  "limitations": [
+    "liability",
+    "patent-use",
+    "trademark-use",
+    "warranty"
+  ],
+  "notes": [
+    "Designed for creative works, documentation and data rather than software."
+  ],
+  "url": "https://creativecommons.org/licenses/by/4.0/",
+  "matchAll": [
+    "creative commons attribution 4.0 international public license"
+  ],
+  "matchNone": []
+}

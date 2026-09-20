@@ -1,0 +1,16 @@
+LuminaIDE bundles or depends on the following open-source software. Each is used
+under its own license; see the linked projects for the full texts.
+
+  Avalonia UI             MIT             https://github.com/AvaloniaUI/Avalonia
+  AvaloniaEdit            MIT             https://github.com/AvaloniaUI/AvaloniaEdit
+  .NET runtime            MIT             https://github.com/dotnet/runtime
+  Svg.Skia, SkiaSharp     MIT             https://github.com/wieslawsoltes/Svg.Skia
+  pulldown-cmark          MIT             https://github.com/pulldown-cmark/pulldown-cmark
+  serde, serde_json       MIT OR Apache-2.0   https://serde.rs
+  Inter (font)            OFL-1.1         https://rsms.me/inter  (app/Assets/Fonts/OFL-Inter.txt)
+  JetBrains Mono (font)   OFL-1.1         https://www.jetbrains.com/lp/mono  (app/Assets/Fonts/OFL-JetBrainsMono.txt)
+  ignore (ripgrep)        MIT OR Unlicense    https://github.com/BurntSushi/ripgrep
+
+The theme names Nord, Dracula and Solarized refer to colour palettes published
+under permissive licenses by their authors; LuminaIDE ships its own theme files
+using those colours.

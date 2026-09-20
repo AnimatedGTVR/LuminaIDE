@@ -1,0 +1,187 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:LuminaIDE"
+        x:Class="LuminaIDE.MainWindow"
+        Title="LuminaIDE" Icon="avares://LuminaIDE/Assets/icon.png" Width="1280" Height="820" MinWidth="720" MinHeight="460">
+
+  <Grid RowDefinitions="*,Auto">
+
+    <Grid Grid.Row="0" x:Name="Body" ColumnDefinitions="46,280,4,*,Auto,0">
+
+      <!-- Activity bar -->
+      <Border Grid.Column="0" Background="{DynamicResource BgActivity}">
+        <DockPanel>
+          <Border x:Name="ActSettings" DockPanel.Dock="Bottom" Classes="act" ToolTip.Tip="Settings (Ctrl+,)">
+            <Path Width="24" Height="24" Data="M4,7 H20 M4,12 H20 M4,17 H20 M8,5 A2,2 0 1 0 8,9 A2,2 0 1 0 8,5 Z M15,10 A2,2 0 1 0 15,14 A2,2 0 1 0 15,10 Z M10,15 A2,2 0 1 0 10,19 A2,2 0 1 0 10,15 Z" />
+          </Border>
+          <Border x:Name="ActAgent" DockPanel.Dock="Bottom" Classes="act" ToolTip.Tip="AI agent — Claude Code / Codex (Ctrl+Shift+A)">
+            <Path Width="24" Height="24" Data="M12,3.5 L13.9,9.6 L20,11.5 L13.9,13.4 L12,19.5 L10.1,13.4 L4,11.5 L10.1,9.6 Z" />
+          </Border>
+          <StackPanel>
+          <Border x:Name="ActExplorer" Classes="act active" ToolTip.Tip="Explorer (Ctrl+Shift+E)">
+            <Path Width="24" Height="24" Data="M3.5,6.5 L3.5,18.5 L20.5,18.5 L20.5,8.5 L11.5,8.5 L9.5,6.5 Z" />
+          </Border>
+          <Border x:Name="ActSearch" Classes="act" ToolTip.Tip="Search (Ctrl+Shift+F)">
+            <Path Width="24" Height="24" Data="M10,4 A6,6 0 1 0 10,16 A6,6 0 1 0 10,4 Z M14.5,14.5 L20,20" />
+          </Border>
+          <Border x:Name="ActExtensions" Classes="act" ToolTip.Tip="Languages &amp; Extensions (Ctrl+Shift+X)">
+            <Path Width="24" Height="24" Data="M4,4 h7 v7 h-7 Z M13,4 h7 v7 h-7 Z M4,13 h7 v7 h-7 Z M13,13 h7 v7 h-7 Z" />
+          </Border>
+          <Border x:Name="ActWeb" Classes="act" ToolTip.Tip="Web &amp; npm (Ctrl+Shift+W)">
+            <Path Width="24" Height="24" Data="M12,3 A9,9 0 1 0 12,21 A9,9 0 1 0 12,3 Z M3,12 H21 M12,3 C8,7 8,17 12,21 M12,3 C16,7 16,17 12,21" />
+          </Border>
+          </StackPanel>
+        </DockPanel>
+      </Border>
+
+      <!-- Side panel -->
+      <Border Grid.Column="1" x:Name="SidePanel" Background="{DynamicResource BgSidebar}"
+              BorderBrush="{DynamicResource Border}" BorderThickness="0,0,1,0" ClipToBounds="True">
+        <Grid>
+          <!-- Explorer -->
+          <Grid x:Name="ExplorerView" RowDefinitions="Auto,Auto,*">
+            <Grid Grid.Row="0" ColumnDefinitions="*,Auto" Margin="14,12,8,6">
+              <TextBlock x:Name="RootLabel" Classes="section" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" />
+              <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="1">
+                <Border x:Name="NewFileButton" Classes="iconbtn" ToolTip.Tip="New file (Ctrl+N)"><Path Data="M6,3.5 H13 L18,8.5 V20.5 H6 Z M13,3.5 V8.5 H18 M12,12 V17 M9.5,14.5 H14.5" /></Border>
+                <Border x:Name="OpenFolderButton" Classes="iconbtn" ToolTip.Tip="Open folder (Ctrl+O)"><Path Data="M3.5,6.5 L3.5,18.5 L20.5,18.5 L20.5,8.5 L11.5,8.5 L9.5,6.5 Z" /></Border>
+                <Border x:Name="RefreshButton" Classes="iconbtn" ToolTip.Tip="Refresh"><Path Data="M19.5,12 A7.5,7.5 0 1 1 17.3,6.7 M19.5,4.5 V8.5 H15.5" /></Border>
+              </StackPanel>
+            </Grid>
+            <TextBox Grid.Row="1" x:Name="NewFileBox" IsVisible="False" Margin="10,0,10,6" Watermark="folder/name.ext  (Enter)" />
+            <TreeView Grid.Row="2" x:Name="Tree" Margin="4,0">
+              <TreeView.Styles>
+                <Style Selector="TreeViewItem">
+                  <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                </Style>
+              </TreeView.Styles>
+              <TreeView.DataTemplates>
+                <TreeDataTemplate DataType="{x:Type local:Node}" ItemsSource="{Binding Children}">
+                  <StackPanel Orientation="Horizontal" Spacing="8">
+                    <local:FileIcon FileName="{Binding Name}" IsDir="{Binding IsDir}" IsOpen="{Binding IsExpanded}" Size="18" />
+                    <TextBlock Text="{Binding Name}" VerticalAlignment="Center" />
+                  </StackPanel>
+                </TreeDataTemplate>
+              </TreeView.DataTemplates>
+            </TreeView>
+            <StackPanel Grid.Row="2" x:Name="NoFolder" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="14">
+              <TextBlock Classes="muted" Text="No folder open" HorizontalAlignment="Center" />
+              <Border x:Name="NoFolderOpen" Classes="btn" HorizontalAlignment="Center"><TextBlock Text="Open Folder" /></Border>
+            </StackPanel>
+          </Grid>
+
+          <!-- Search -->
+          <Grid x:Name="SearchView" RowDefinitions="Auto,Auto,*" IsVisible="False">
+            <TextBlock Grid.Row="0" Classes="section" Text="SEARCH" Margin="14,14,14,8" />
+            <TextBox Grid.Row="1" x:Name="SearchBox" Margin="10,0,10,8" Watermark="Search project  (Enter)" />
+            <ListBox Grid.Row="2" x:Name="Results">
+              <ListBox.ItemTemplate>
+                <DataTemplate>
+                  <StackPanel Spacing="1">
+                    <TextBlock Text="{Binding Text}" TextTrimming="CharacterEllipsis" FontSize="12" />
+                    <TextBlock Text="{Binding Where}" Classes="muted" FontSize="11" TextTrimming="PrefixCharacterEllipsis" />
+                  </StackPanel>
+                </DataTemplate>
+              </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock Grid.Row="2" x:Name="SearchHint" Classes="muted" Margin="16,4" TextWrapping="Wrap" />
+          </Grid>
+
+          <!-- Web & npm -->
+          <local:NpmView x:Name="Web" IsVisible="False" />
+
+          <!-- Extensions -->
+          <Grid x:Name="ExtensionsView" RowDefinitions="Auto,*,Auto" IsVisible="False">
+            <TextBlock Grid.Row="0" Classes="section" Text="LANGUAGES &amp; EXTENSIONS" Margin="14,14,14,8" />
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+              <StackPanel x:Name="ExtList" Spacing="8" Margin="10,0,10,10" />
+            </ScrollViewer>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="4" Margin="8,4,8,10">
+              <Border x:Name="ExtOpenFolder" Classes="item"><TextBlock Classes="muted" FontSize="12" Text="Open extensions folder" /></Border>
+              <Border x:Name="ExtReload" Classes="item"><TextBlock Classes="muted" FontSize="12" Text="Reload" /></Border>
+            </StackPanel>
+          </Grid>
+        </Grid>
+      </Border>
+
+      <GridSplitter Grid.Column="2" x:Name="SideSplitter" Width="4" ResizeDirection="Columns" />
+
+      <!-- Editor area -->
+      <Grid Grid.Column="3" x:Name="MainGrid" RowDefinitions="Auto,*,4,0">
+        <Border Grid.Row="0" x:Name="TabBar" IsVisible="False" Background="{DynamicResource BgPanel}"
+                BorderBrush="{DynamicResource Border}" BorderThickness="0,0,0,1">
+          <Grid ColumnDefinitions="*,Auto">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+              <StackPanel x:Name="TabStrip" Orientation="Horizontal" />
+            </ScrollViewer>
+            <Border Grid.Column="1" x:Name="RunButton" Classes="item" IsVisible="False" Margin="4,0,8,0" VerticalAlignment="Center"
+                    ToolTip.Tip="Run this file in the terminal (F5) — Shift+F5 stops it">
+              <StackPanel Orientation="Horizontal" Spacing="7">
+                <Path Data="M6,4 L19,12 L6,20 Z" Fill="{DynamicResource Accent}" Width="12" Height="12" Stretch="Uniform" VerticalAlignment="Center" />
+                <TextBlock Text="Run" FontWeight="SemiBold" />
+              </StackPanel>
+            </Border>
+          </Grid>
+        </Border>
+
+        <Panel Grid.Row="1" Background="{DynamicResource Bg}">
+          <ContentControl x:Name="EditorHost" />
+          <local:WelcomeView x:Name="Welcome" />
+          <!-- Settings / release notes / about, shown over the editor -->
+          <Border x:Name="PageLayer" IsVisible="False" Background="{DynamicResource Bg}">
+            <Border.Transitions><Transitions><DoubleTransition Property="Opacity" Duration="0:0:0.16" /></Transitions></Border.Transitions>
+            <Grid RowDefinitions="Auto,*">
+              <Border BorderBrush="{DynamicResource Border}" BorderThickness="0,0,0,1" Background="{DynamicResource BgPanel}">
+                <Grid ColumnDefinitions="*,Auto" Margin="18,0,8,0" Height="38">
+                  <TextBlock x:Name="PageTitle" FontWeight="SemiBold" VerticalAlignment="Center" />
+                  <Border x:Name="PageClose" Grid.Column="1" Classes="iconbtn" VerticalAlignment="Center" ToolTip.Tip="Close (Esc)"><Path Data="M6,6 L18,18 M18,6 L6,18" Width="10" Height="10" /></Border>
+                </Grid>
+              </Border>
+              <ContentControl x:Name="PageContent" Grid.Row="1" />
+            </Grid>
+          </Border>
+        </Panel>
+
+        <GridSplitter Grid.Row="2" x:Name="TermSplitter" IsVisible="False" Height="4" ResizeDirection="Rows" />
+
+        <Border Grid.Row="3" x:Name="TermPanel" Background="{DynamicResource BgInput}"
+                BorderBrush="{DynamicResource Border}" BorderThickness="0,1,0,0" ClipToBounds="True">
+          <Grid RowDefinitions="Auto,*,Auto">
+            <Grid Grid.Row="0" ColumnDefinitions="*,Auto" Margin="14,8,8,2">
+              <TextBlock Classes="section" Text="TERMINAL" VerticalAlignment="Center" />
+              <Border x:Name="TermClose" Grid.Column="1" Classes="iconbtn" ToolTip.Tip="Hide terminal (Ctrl+`)"><Path Data="M6,6 L18,18 M18,6 L6,18" Width="10" Height="10" /></Border>
+            </Grid>
+            <TextBox Grid.Row="1" x:Name="TermOut" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap"
+                     BorderThickness="0" Background="Transparent" FontFamily="avares://LuminaIDE/Assets/Fonts#JetBrains Mono,DejaVu Sans Mono,Noto Sans Mono,monospace" FontSize="12.5" />
+            <TextBox Grid.Row="2" x:Name="TermInput" Margin="10,4,10,10" Watermark="Type a command and press Enter"
+                     FontFamily="avares://LuminaIDE/Assets/Fonts#JetBrains Mono,DejaVu Sans Mono,Noto Sans Mono,monospace" FontSize="12.5" />
+          </Grid>
+        </Border>
+      </Grid>
+
+      <!-- Agent panel -->
+      <GridSplitter Grid.Column="4" x:Name="AgentSplitter" Width="4" IsVisible="False" ResizeDirection="Columns" />
+      <Border Grid.Column="5" x:Name="AgentPanel" Background="{DynamicResource BgSidebar}"
+              BorderBrush="{DynamicResource Border}" BorderThickness="1,0,0,0" ClipToBounds="True">
+        <local:AgentView x:Name="Agent" />
+      </Border>
+    </Grid>
+
+    <!-- Status bar -->
+    <Border Grid.Row="1" Background="{DynamicResource BgStatus}" Height="25" BorderBrush="{DynamicResource Border}" BorderThickness="0,1,0,0">
+      <Grid ColumnDefinitions="*,Auto" Margin="8,0">
+        <TextBlock Grid.Column="0" x:Name="StatusLeft" Classes="status" FontSize="12" VerticalAlignment="Center" Margin="6,0" TextTrimming="CharacterEllipsis" />
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="2">
+          <Border x:Name="StatusDev" Classes="item status" Padding="8,2" VerticalAlignment="Center" IsVisible="False" ToolTip.Tip="Open the dev server in your browser"><TextBlock x:Name="StatusDevText" Classes="status" FontSize="12" /></Border>
+          <TextBlock x:Name="StatusPos" Classes="status" FontSize="12" VerticalAlignment="Center" Margin="8,0" />
+          <Border x:Name="StatusPreview" Classes="item status" Padding="8,2" VerticalAlignment="Center" IsVisible="False"><TextBlock x:Name="StatusPreviewText" Classes="status" FontSize="12" /></Border>
+          <Border x:Name="StatusLang" Classes="item status" Padding="8,2" VerticalAlignment="Center"><TextBlock x:Name="StatusLangText" Classes="status" FontSize="12" /></Border>
+          <Border x:Name="StatusTheme" Classes="item status" Padding="8,2" VerticalAlignment="Center"><TextBlock x:Name="StatusThemeText" Classes="status" FontSize="12" /></Border>
+        </StackPanel>
+      </Grid>
+    </Border>
+
+    <!-- Quick open / command palette (last child = on top of everything) -->
+    <local:QuickPick x:Name="Quick" Grid.RowSpan="2" />
+  </Grid>
+</Window>

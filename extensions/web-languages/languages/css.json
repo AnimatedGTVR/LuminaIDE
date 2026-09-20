@@ -1,0 +1,22 @@
+{
+  "id": "css",
+  "name": "CSS",
+  "extensions": [
+    ".css"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "dashIdents": true,
+  "hexColors": true,
+  "keyChars": ":",
+  "attributePrefix": "@",
+  "pascalCaseTypes": false
+}

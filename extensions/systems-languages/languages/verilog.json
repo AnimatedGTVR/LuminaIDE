@@ -1,0 +1,107 @@
+{
+  "id": "verilog",
+  "name": "Verilog / SystemVerilog",
+  "extensions": [
+    ".v",
+    ".sv",
+    ".svh",
+    ".vh"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "module",
+    "endmodule",
+    "input",
+    "output",
+    "inout",
+    "wire",
+    "reg",
+    "logic",
+    "assign",
+    "always",
+    "always_ff",
+    "always_comb",
+    "always_latch",
+    "initial",
+    "begin",
+    "end",
+    "parameter",
+    "localparam",
+    "integer",
+    "generate",
+    "endgenerate",
+    "genvar",
+    "function",
+    "endfunction",
+    "task",
+    "endtask",
+    "posedge",
+    "negedge",
+    "class",
+    "endclass",
+    "interface",
+    "endinterface",
+    "package",
+    "endpackage",
+    "import",
+    "typedef",
+    "enum",
+    "struct",
+    "union",
+    "modport"
+  ],
+  "control": [
+    "if",
+    "else",
+    "case",
+    "casez",
+    "casex",
+    "endcase",
+    "default",
+    "for",
+    "while",
+    "repeat",
+    "forever",
+    "return",
+    "break",
+    "continue"
+  ],
+  "types": [
+    "wire",
+    "reg",
+    "logic",
+    "bit",
+    "byte",
+    "int",
+    "shortint",
+    "longint",
+    "integer",
+    "real",
+    "time",
+    "string"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "definitionKeywords": [
+    "module",
+    "function",
+    "task",
+    "class",
+    "interface",
+    "package"
+  ],
+  "attributePrefix": "`"
+}

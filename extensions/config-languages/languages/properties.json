@@ -1,0 +1,13 @@
+{
+  "id": "properties",
+  "name": "Java Properties",
+  "extensions": [
+    ".properties"
+  ],
+  "lineComments": [
+    "#",
+    "!"
+  ],
+  "keyChars": "=:",
+  "pascalCaseTypes": false
+}

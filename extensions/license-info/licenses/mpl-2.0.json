@@ -1,0 +1,29 @@
+{
+  "id": "MPL-2.0",
+  "name": "Mozilla Public License 2.0",
+  "category": "Weak copyleft (per file)",
+  "summary": "Copyleft at the file level: if you change an MPL-licensed file you must share your changes to that file under the MPL, but you can combine it with code under other licenses, even proprietary ones, in a larger work.",
+  "permissions": [
+    "commercial-use",
+    "distribution",
+    "modifications",
+    "patent-use",
+    "private-use"
+  ],
+  "conditions": [
+    "disclose-source",
+    "include-copyright",
+    "same-license--file"
+  ],
+  "limitations": [
+    "liability",
+    "trademark-use",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/mpl-2.0/",
+  "matchAll": [
+    "mozilla public license version 2.0"
+  ],
+  "matchNone": []
+}

@@ -1,0 +1,32 @@
+{
+  "id": "GPL-3.0",
+  "name": "GNU General Public License v3.0",
+  "category": "Strong copyleft",
+  "summary": "Strong copyleft: you can use, change and sell the software, but if you distribute it (or something built on it) you must share the complete source under the same license. Adds an explicit patent grant.",
+  "permissions": [
+    "commercial-use",
+    "modifications",
+    "distribution",
+    "patent-use",
+    "private-use"
+  ],
+  "conditions": [
+    "disclose-source",
+    "include-copyright",
+    "document-changes",
+    "same-license"
+  ],
+  "limitations": [
+    "liability",
+    "warranty"
+  ],
+  "notes": [],
+  "url": "https://choosealicense.com/licenses/gpl-3.0/",
+  "matchAll": [
+    "gnu general public license version 3 29 june 2007"
+  ],
+  "matchNone": [
+    "gnu lesser general public license version 3",
+    "gnu affero general public license version 3"
+  ]
+}

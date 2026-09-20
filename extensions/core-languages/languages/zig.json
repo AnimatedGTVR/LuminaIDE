@@ -1,0 +1,75 @@
+{
+  "id": "zig",
+  "name": "Zig",
+  "extensions": [
+    ".zig"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "const",
+    "var",
+    "fn",
+    "pub",
+    "struct",
+    "enum",
+    "union",
+    "error",
+    "usingnamespace",
+    "comptime",
+    "inline",
+    "export",
+    "extern",
+    "test",
+    "defer",
+    "errdefer",
+    "try",
+    "catch",
+    "async",
+    "await"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "switch",
+    "return",
+    "break",
+    "continue",
+    "orelse",
+    "unreachable"
+  ],
+  "types": [
+    "u8",
+    "u16",
+    "u32",
+    "u64",
+    "i8",
+    "i16",
+    "i32",
+    "i64",
+    "usize",
+    "isize",
+    "f32",
+    "f64",
+    "bool",
+    "void",
+    "anytype",
+    "type"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "null",
+    "undefined"
+  ],
+  "definitionKeywords": [
+    "fn"
+  ],
+  "run": "zig run {file}"
+}

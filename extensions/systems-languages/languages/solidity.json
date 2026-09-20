@@ -1,0 +1,112 @@
+{
+  "id": "solidity",
+  "name": "Solidity",
+  "extensions": [
+    ".sol"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\"",
+    "'"
+  ],
+  "keywords": [
+    "pragma",
+    "import",
+    "contract",
+    "interface",
+    "library",
+    "function",
+    "modifier",
+    "event",
+    "error",
+    "struct",
+    "enum",
+    "mapping",
+    "public",
+    "private",
+    "internal",
+    "external",
+    "view",
+    "pure",
+    "payable",
+    "constant",
+    "immutable",
+    "override",
+    "virtual",
+    "memory",
+    "storage",
+    "calldata",
+    "emit",
+    "constructor",
+    "using",
+    "is",
+    "returns",
+    "abstract",
+    "indexed",
+    "anonymous",
+    "fallback",
+    "receive"
+  ],
+  "control": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "return",
+    "break",
+    "continue",
+    "try",
+    "catch",
+    "revert",
+    "require",
+    "assert"
+  ],
+  "types": [
+    "uint",
+    "uint8",
+    "uint16",
+    "uint32",
+    "uint64",
+    "uint128",
+    "uint256",
+    "int",
+    "int256",
+    "address",
+    "bool",
+    "string",
+    "bytes",
+    "bytes32",
+    "bytes4"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "this",
+    "msg",
+    "block",
+    "tx",
+    "now",
+    "wei",
+    "ether",
+    "gwei"
+  ],
+  "definitionKeywords": [
+    "contract",
+    "interface",
+    "library",
+    "function",
+    "modifier",
+    "event",
+    "struct",
+    "enum"
+  ]
+}

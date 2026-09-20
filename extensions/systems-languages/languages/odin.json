@@ -1,0 +1,88 @@
+{
+  "id": "odin",
+  "name": "Odin",
+  "extensions": [
+    ".odin"
+  ],
+  "lineComments": [
+    "//"
+  ],
+  "blockComments": [
+    [
+      "/*",
+      "*/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "keywords": [
+    "package",
+    "import",
+    "foreign",
+    "proc",
+    "struct",
+    "enum",
+    "union",
+    "map",
+    "bit_set",
+    "distinct",
+    "dynamic",
+    "using",
+    "defer",
+    "where",
+    "context"
+  ],
+  "control": [
+    "if",
+    "else",
+    "when",
+    "for",
+    "switch",
+    "case",
+    "in",
+    "return",
+    "break",
+    "continue",
+    "fallthrough",
+    "do"
+  ],
+  "types": [
+    "int",
+    "i8",
+    "i16",
+    "i32",
+    "i64",
+    "uint",
+    "u8",
+    "u16",
+    "u32",
+    "u64",
+    "f32",
+    "f64",
+    "bool",
+    "string",
+    "rawptr",
+    "cstring",
+    "rune",
+    "byte",
+    "any",
+    "typeid"
+  ],
+  "constants": [
+    "true",
+    "false",
+    "nil"
+  ],
+  "definitionKeywords": [
+    "proc",
+    "struct",
+    "enum",
+    "union"
+  ],
+  "multilineStrings": [
+    "`"
+  ],
+  "attributePrefix": "@",
+  "run": "odin run {file} -file"
+}

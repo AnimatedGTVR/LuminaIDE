@@ -1,0 +1,82 @@
+{
+  "id": "lean",
+  "name": "Lean",
+  "extensions": [
+    ".lean"
+  ],
+  "keywords": [
+    "import",
+    "namespace",
+    "open",
+    "theorem",
+    "lemma",
+    "def",
+    "instance",
+    "structure",
+    "inductive",
+    "class",
+    "variable",
+    "universe",
+    "axiom",
+    "example",
+    "abbrev",
+    "end",
+    "section",
+    "where",
+    "deriving",
+    "private",
+    "protected"
+  ],
+  "control": [
+    "fun",
+    "match",
+    "with",
+    "if",
+    "then",
+    "else",
+    "do",
+    "return",
+    "by",
+    "from",
+    "have",
+    "show"
+  ],
+  "types": [
+    "Nat",
+    "Int",
+    "Bool",
+    "String",
+    "Prop",
+    "Type",
+    "Sort",
+    "List",
+    "Option",
+    "Array"
+  ],
+  "constants": [
+    "true",
+    "false"
+  ],
+  "definitionKeywords": [
+    "def",
+    "theorem",
+    "lemma",
+    "structure",
+    "inductive",
+    "class",
+    "instance"
+  ],
+  "lineComments": [
+    "--"
+  ],
+  "blockComments": [
+    [
+      "/-",
+      "-/"
+    ]
+  ],
+  "strings": [
+    "\""
+  ],
+  "run": "lean --run {file}"
+}

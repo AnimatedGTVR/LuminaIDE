@@ -1,0 +1,18 @@
+{
+  "name": "scripting-languages",
+  "displayName": "Scripting Languages",
+  "version": "0.1.0",
+  "description": "Syntax highlighting for Ruby, Perl, R, Julia, PowerShell, Batch, AWK, Tcl, Vim Script, Dart.",
+  "languages": [
+    "languages/ruby.json",
+    "languages/perl.json",
+    "languages/r.json",
+    "languages/julia.json",
+    "languages/powershell.json",
+    "languages/batch.json",
+    "languages/awk.json",
+    "languages/tcl.json",
+    "languages/vim.json",
+    "languages/dart.json"
+  ]
+}
