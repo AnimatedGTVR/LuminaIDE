@@ -5,44 +5,67 @@ WHAT TO DO
 Use REPO_URL = "https://github.com/AnimatedGTVR/LuminaIDE" and RELEASES_URL = REPO_URL + "/releases".
 The LuminaIDE website already exists in this project. Do not rebuild it and do not restyle it. Add a changelog to it: a full /changelog page, a link to it in the navigation and footer, and a small "What's new" teaser on the home page. Use the site's existing design language exactly: the deep indigo background, the glass cards, the drifting orbs, the same fonts (Inter for text, JetBrains Mono for code), the same accent colors, the same spacing, the same light and dark schemes and the same reduced-motion behavior. If a component for cards, pills, buttons, section headings or the footer already exists, reuse it.
 
-Also update the version shown across the site to 0.2.0. Search the whole project for the old version number ("0.1.0", "v0.1.0") and update current-version references (preserve historical release entries): the hero eyebrow badge, the download package names (for example LuminaIDE-v0.2.0-linux-x64.tar.gz), the "It's version ..." line in the honesty section, the fake terminal demo, the JSON-LD softwareVersion, the footer. Better: make it come from one constant, LATEST_VERSION, exported from lib/data/changelog.ts (below), and import that everywhere so it can never drift again. The hero eyebrow badge should read "v0.2.0 · Free and open source" and should link to /changelog. Remove any text that says "first public release".
+Also update the version shown across the site to 0.3.0. Search the whole project for the old version number ("0.1.0", "v0.1.0") and update current-version references (preserve historical release entries): the hero eyebrow badge, the download package names (for example LuminaIDE-v0.3.0-linux-x64.tar.gz), the "It's version ..." line in the honesty section, the fake terminal demo, the JSON-LD softwareVersion, the footer. Better: make it come from one constant, LATEST_VERSION, exported from lib/data/changelog.ts (below), and import that everywhere so it can never drift again. The hero eyebrow badge should read "v0.3.0 · Free and open source" and should link to /changelog. Remove any text that says "first public release".
 
 STEP 1: THE DATA FILE
-Create lib/data/changelog.ts with exactly the content between the two lines marked BEGIN and END below. It is the real, complete changelog (2 releases, 26 entries). Do not shorten, reword, merge, translate or invent entries. Do not add any release, date, feature or number that is not in this file. Bullets contain tiny inline markdown (**bold**, *italic*, `code`), so write a small pure function renderInline(text) that turns those into React nodes (strong, em, and a mono code element with a subtle glass background). Do not use dangerouslySetInnerHTML and do not add a markdown library.
+Create lib/data/changelog.ts with exactly the content between the two lines marked BEGIN and END below. It is the real, complete changelog (3 releases, 36 entries). Do not shorten, reword, merge, translate or invent entries. Do not add any release, date, feature or number that is not in this file. Bullets contain tiny inline markdown (**bold**, *italic*, `code`), so write a small pure function renderInline(text) that turns those into React nodes (strong, em, and a mono code element with a subtle glass background). Do not use dangerouslySetInnerHTML and do not add a markdown library.
 
 ----- BEGIN lib/data/changelog.ts -----
 export type ChangeGroup = "Added" | "Changed" | "Fixed" | "Removed" | "Known limitations";
 export type ChangelogEntry = { version: string; date: string; summary: string; groups: Partial<Record<ChangeGroup, string[]>> };
-
-// Newest first. Bullets contain tiny inline markdown: **bold**, `code`, *italic*.
 export const CHANGELOG: ChangelogEntry[] = [
   {
-    version: "0.2.0",
-    date: "2026-09-20",
-    summary: "Looks, images and licenses.",
-    groups: {
+    "version": "0.3.0",
+    "date": "2026-09-20",
+    "summary": "Build, download and make it yours.",
+    "groups": {
+      "Added": [
+        "**Build Studio**: a graphical builder for Windows, macOS and Linux with prerequisite checks, live compiler output, cancellation, tests and self-contained download packaging.",
+        "**Build from any browser**: manually trigger the Downloads workflow on GitHub to build Linux x64/ARM64, macOS Intel/Apple silicon and Windows x64 packages. Downloadable artifacts include SHA-256 checksums.",
+        "**Binary installers** in Linux and Windows downloads add app-menu / Start-menu entries without requiring source code or developer tools."
+      ],
+      "Changed": [
+        "**Build Studio matches the editor**: shared theme colours, Inter and JetBrains Mono, the LuminaIDE icon, matching cards and controls, and a theme picker that starts with your editor theme.",
+        "**A calmer interface**: opaque surfaces, a neutral Vanta Night palette, clearer secondary text, compact welcome cards and shorter release-note previews.",
+        "**Build scripts** now show numbered stages, check dependencies before building, preserve CMake generator choices, and expose build, run, test, package and GUI commands. Windows discovers Visual Studio Build Tools automatically.",
+        "Updated Intel macOS release runners and documented platform setup, architecture selection and browser builds."
+      ],
+      "Removed": [
+        "**Liquid Glass** themes, window blur settings and animated welcome-page orbs. Existing Liquid Glass selections migrate to Vanta Night; legacy translucent UI colours become opaque."
+      ],
+      "Fixed": [
+        "Cross-platform configuration isolation and Windows builds selecting Git Bash’s `link.exe` instead of the MSVC linker.",
+        "Linux release downloads no longer include a source-only installer that cannot work from the archive."
+      ]
+    }
+  },
+  {
+    "version": "0.2.0",
+    "date": "2026-09-20",
+    "summary": "Looks, images and licenses.",
+    "groups": {
       "Added": [
         "**Images in Markdown previews**: local files, `data:` URIs, HTML `<img>` tags (including centered logos), linked badges, and `https://` images. **SVG** works, so shields.io-style badges render. Remote images load in the background with size and time limits, are cached, and are never downgraded to http. A setting turns them off, and a blocked image can be loaded with one click.",
         "**Animated GIFs** in Markdown previews. Optimised GIFs are composed correctly, frame delays and loop counts are honoured (delays of 10 ms or less play at 100 ms, like browsers), all GIFs share one timer, and a GIF only plays while it is on screen. Click one to pause it; a setting turns animation off.",
         "**License guide**: opening a `LICENSE` / `COPYING` / `UNLICENSE`-style file shows which license it is and what it allows, in plain language (22 licenses; unknown ones say so). The command palette gains *License: Explain This File* and *Licenses: Browse the Guide…*. Licenses are extension data, so you can add your own.",
-        "**File icons** in the explorer, tabs and quick open: colour-coded type badges and theme-tinted folders that open and close.",
+        "**File icons** in the explorer, tabs and quick open: colour-coded type badges and theme-tinted folders that open and close."
       ],
       "Changed": [
         "**A visual overhaul**: Inter (interface) and JetBrains Mono (code, terminal, Markdown code blocks) are now bundled, so text looks the same on every OS.",
         "Redesigned **tabs** (file icon, and a dirty dot that turns into a close button on hover), icon toolbars, a settings page made of cards, hover and fade transitions, and a quieter status bar.",
-        "Avalonia updated to 11.2.7 (needed for SVG support).",
+        "Avalonia updated to 11.2.7 (needed for SVG support)."
       ],
       "Fixed": [
         "Markdown images written as `/assets/logo.png` now resolve from the **repository root** (the nearest folder with `.git` above the Markdown file, as on GitHub) instead of the folder open in the editor, so they load even when a parent folder is open.",
-        "Images scale down to fit a narrow preview instead of being cropped, and `width=` / `height=` on `<img>` tags are honoured.",
-      ],
-    },
+        "Images scale down to fit a narrow preview instead of being cropped, and `width=` / `height=` on `<img>` tags are honoured."
+      ]
+    }
   },
   {
-    version: "0.1.0",
-    date: "2026-09-20",
-    summary: "The first build.",
-    groups: {
+    "version": "0.1.0",
+    "date": "2026-09-20",
+    "summary": "The first build.",
+    "groups": {
       "Added": [
         "**A small, fast editor**: explorer, project search (Ctrl+Shift+F), tabs, find (Ctrl+F), fuzzy quick open (Ctrl+P), a command palette (Ctrl+Shift+P), an integrated terminal (Ctrl+`), auto-save, zoom, and per-file language override.",
         "**89 languages** highlighted out of the box, including Nix, Haskell, OCaml, Elixir, Swift, Dart, PHP, Ruby, HTML/CSS/SCSS, Vue, Svelte, GLSL and more. A language is a small JSON file, so adding your own takes minutes.",
@@ -57,17 +80,16 @@ export const CHANGELOG: ChangelogEntry[] = [
         "**A new welcome screen** with recent folders, quick actions and these release notes.",
         "**Safer file opening**: files over 8 MB, binary files, and files with extremely long lines are refused with a message instead of freezing the editor. Unexpected errors are written to `crash.log` and most are survived instead of closing the app.",
         "**Command line and installers**: `luminaide .` opens a folder (and returns immediately), `--version`, `--help` and `--selftest` (checks that the native libraries and shell work), `install.sh` / `install.ps1`, a macOS app-bundle builder, and CI and release workflows.",
-        "**macOS and Windows** builds alongside Linux (see the README for what is verified where).",
+        "**macOS and Windows** builds alongside Linux (see the README for what is verified where)."
       ],
       "Known limitations": [
         "The built-in terminal is line-based: fine for commands and scripts, not for full-screen programs.",
         "Highlighting is lexical (no language servers yet), and the Markdown preview does not scroll in sync with the editor.",
-        "Liquid Glass approximates the look using the platform's window blur; it is not Apple's private Liquid Glass API.",
-      ],
-    },
-  },
+        "Liquid Glass approximates the look using the platform's window blur; it is not Apple's private Liquid Glass API."
+      ]
+    }
+  }
 ];
-
 export const LATEST_VERSION = CHANGELOG[0].version;
 ----- END lib/data/changelog.ts -----
 
@@ -78,18 +100,18 @@ Layout, top to bottom:
 1. Page header: small eyebrow "Changelog", H1 "What's new in LuminaIDE.", one sentence below it: "Every release, newest first. Small on purpose, and growing carefully." On the right of the header (stacked under it on phones) a glass pill with the latest version, and a text link "Subscribe via RSS" pointing to /changelog/rss.xml.
 2. A filter row (sticky under the site header on scroll, glass background with blur): a search field ("Search the changelog", press / to focus it) and toggle chips for the groups: All, Added, Changed, Fixed, Known limitations. Filtering is instant and client-side. Matching text in bullets is highlighted with a mark element using the accent color at low opacity. If nothing matches, show a friendly empty state: "Nothing matches that. Try a different word." with a "Clear filters" button. Keep the current search and chips in the URL query string (?q=images&group=Fixed) so a filtered view can be shared, and read them back on load.
 3. The timeline. A slim vertical line on the left with a glowing dot for each release (on phones the line hugs the left edge and the content is full width). Each release is one glass card containing:
-   - a header row: the version in a large mono style ("0.2.0"), the date formatted like "September 20, 2026" (use a fixed locale and UTC so server and client always match and there are no hydration warnings), and a "Latest" pill on the first release only;
-   - a copy-link button that copies the URL with the anchor (for example /changelog#v0.2.0) and shows "Copied" for two seconds; every release has an id like v0.2.0 so the anchor works, and scroll-margin-top accounts for the sticky header;
+   - a header row: the version in a large mono style ("0.3.0"), the date formatted like "September 20, 2026" (use a fixed locale and UTC so server and client always match and there are no hydration warnings), and a "Latest" pill on the first release only;
+   - a copy-link button that copies the URL with the anchor (for example /changelog#v0.3.0) and shows "Copied" for two seconds; every release has an id like v0.3.0 so the anchor works, and scroll-margin-top accounts for the sticky header;
    - the summary sentence in muted text;
    - one section per group in this order: Added, Changed, Fixed, Removed, Known limitations. Each section has a small colored label pill (Added green, Changed blue, Fixed amber, Removed red, Known limitations gray) and a list of bullets rendered with renderInline. Skip groups that are empty. Use real ul and li elements with comfortable line height, and never let a long line of code overflow: wrap it.
    - if a release has more than 6 bullets in a group, show the first 6 and a "Show N more" button that expands the rest smoothly (respect reduced motion). If a search or chip filter is active, expand everything that matches.
    The first (latest) release starts fully open. Older releases are also open by default, because there are only 2; but build the card so it is easy to collapse later.
-4. At the very bottom: a short glass card titled "Get 0.2.0" with the Download button (the same one used in the hero, linking to RELEASES_URL from lib/site.ts) and a secondary link "All releases on GitHub" (also from lib/site.ts). Below it, a muted line: "Versions follow semantic versioning. Release notes are maintained from CHANGELOG.md in the repository."
+4. At the very bottom: a short glass card titled "Get 0.3.0" with the Download button (the same one used in the hero, linking to RELEASES_URL from lib/site.ts) and a secondary link "All releases on GitHub" (also from lib/site.ts). Below it, a muted line: "Versions follow semantic versioning. Release notes are maintained from CHANGELOG.md in the repository."
 
 Add a "Changelog" link to the main navigation between "Download" and "GitHub" (or wherever it fits the existing order), on desktop and in the mobile menu, and to the footer's link list. Mark it as the current page with aria-current when on /changelog. Add the entry to the command palette (Ctrl/Cmd K) if the site has one, labelled "Changelog" with the hint "See what's new".
 
 STEP 3: HOME PAGE TEASER
-On the home page, place a compact "What's new" section just above the download section. Eyebrow "Changelog", H2 "Still moving, in the open.", and a row of up to three glass cards. The cards show the first three bullets of the latest release's "Added" group, each with the bullet rendered through renderInline and cut to about 140 characters with an ellipsis if longer, without cutting inside a bold or code span (if it would, cut before the span). Under the cards: a button "Read the full changelog" linking to /changelog, and a muted line showing "Latest: v0.2.0". Take the data only from CHANGELOG[0]; never hard-code the text.
+On the home page, place a compact "What's new" section just above the download section. Eyebrow "Changelog", H2 "Still moving, in the open.", and a row of up to three glass cards. The cards show the first three bullets of the latest release's "Added" group, each with the bullet rendered through renderInline and cut to about 140 characters with an ellipsis if longer, without cutting inside a bold or code span (if it would, cut before the span). Under the cards: a button "Read the full changelog" linking to /changelog, and a muted line showing "Latest: v0.3.0". Take the data only from CHANGELOG[0]; never hard-code the text.
 
 STEP 4: RSS AND METADATA
 - app/changelog/rss.xml/route.ts returns a valid RSS 2.0 feed (Content-Type application/rss+xml; charset=utf-8). One item per release: title "LuminaIDE {version}", link SITE_URL/changelog#v{version}, guid the same link with isPermaLink true, pubDate in RFC 822 format built from the date at 00:00 UTC, and a description that is the summary plus the bullets as an HTML list, with every string XML-escaped. Take SITE_URL from lib/site.ts (add it there if it does not exist, with a clear TODO comment for the real domain, the same way REPO_URL is handled).
@@ -107,13 +129,13 @@ RULES
 
 WHEN YOU ARE DONE
 Check your own work against this list and fix anything that fails:
-- /changelog renders 2 releases, newest first, with the exact bullets from the data file.
+- /changelog renders 3 releases, newest first, with the exact bullets from the data file.
 - Searching for "images" shows only bullets that mention images, highlighted; the URL updates; reloading keeps the filter.
 - The Fixed chip shows only Fixed sections.
-- The copy-link button and the #v0.2.0 anchor both work.
+- The copy-link button and the #v0.3.0 anchor both work.
 - The home page shows the teaser, and its button leads to /changelog.
-- The version shows as 0.2.0 everywhere, comes from LATEST_VERSION, and 0.1.0 is preserved in historical release data and appears only where that history is rendered.
-- /changelog/rss.xml is valid XML with 2 items.
+- The version shows as 0.3.0 everywhere, comes from LATEST_VERSION, and 0.1.0 is preserved in historical release data and appears only where that history is rendered.
+- /changelog/rss.xml is valid XML with 3 items.
 - Nav, mobile menu and footer all have the Changelog link.
 - Light and dark schemes both look right, and reduced motion turns off every animation.
 

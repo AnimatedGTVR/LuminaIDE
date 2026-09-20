@@ -10,7 +10,7 @@ A theme is one JSON file. LuminaIDE ships seven and you can add your own without
 
 Themes with the same `name` as a built-in one replace it. Broken files are listed under the Extensions panel instead of crashing anything.
 
-Folder locations: Linux `~/.config/luminaide/themes`, macOS `~/.config/luminaide/themes`, Windows `%APPDATA%\luminaide\themes`.
+Folder locations: Linux `~/.config/luminaide/themes`, macOS `~/Library/Application Support/luminaide/themes`, Windows `%APPDATA%\luminaide\themes`.
 
 ## File format
 

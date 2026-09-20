@@ -9,7 +9,7 @@
     <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
     <AvaloniaUseCompiledBindingsByDefault>false</AvaloniaUseCompiledBindingsByDefault>
     <RootNamespace>LuminaIDE</RootNamespace>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Product>LuminaIDE</Product>
     <Authors>Animated</Authors>
     <Description>A small, fast code editor with a Markdown preview, npm/Vite tools and an AI agent panel.</Description>

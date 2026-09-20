@@ -75,6 +75,8 @@ After installing the .NET 8 SDK:
 
 Choose the extracted source folder, then use **Check tools**, **Build editor**, **Build + test** or **Create download**. Compiler output appears live. **Stop** terminates the active build and its child processes. **Save log** exports the displayed output (the last approximately 200–250 KB for long runs). **Open downloads** opens `dist/`.
 
+Build Studio shares the editor's Inter / JetBrains Mono fonts, theme colours and controls. It reads your editor theme at startup; its Appearance picker previews built-in and custom themes without changing your editor settings.
+
 The GUI compiles on first launch and uses the same scripts as CI. It does not silently install dependencies or require Python. Keep one build running per source folder; build output directories are shared.
 
 ## Terminal commands

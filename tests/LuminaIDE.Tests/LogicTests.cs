@@ -7,18 +7,18 @@ namespace LuminaIDE.Tests;
 /// <summary>Points Settings at a throw-away config folder for the duration of a test.</summary>
 public sealed class TempConfig : IDisposable
 {
-    readonly string? _old = Environment.GetEnvironmentVariable("XDG_CONFIG_HOME");
+    readonly string? _old = Environment.GetEnvironmentVariable("LUMINA_CONFIG_HOME");
     public string Root { get; } = Path.Combine(Path.GetTempPath(), "lumina-tests-" + Guid.NewGuid().ToString("N"));
 
     public TempConfig()
     {
         Directory.CreateDirectory(Root);
-        Environment.SetEnvironmentVariable("XDG_CONFIG_HOME", Root);
+        Environment.SetEnvironmentVariable("LUMINA_CONFIG_HOME", Root);
     }
 
     public void Dispose()
     {
-        Environment.SetEnvironmentVariable("XDG_CONFIG_HOME", _old);
+        Environment.SetEnvironmentVariable("LUMINA_CONFIG_HOME", _old);
         try { Directory.Delete(Root, recursive: true); } catch { /* best effort */ }
     }
 }
@@ -39,11 +39,20 @@ public class SettingsTests
     }
 
     [Fact]
-    public void Config_folder_follows_XDG_and_never_falls_back_to_a_relative_path()
+    public void Config_folder_follows_explicit_override_on_every_platform()
     {
         using var cfg = new TempConfig();
         Assert.StartsWith(cfg.Root, Settings.ConfigDir);
         Assert.True(Path.IsPathRooted(Settings.ConfigDir));
+    }
+
+    [Fact]
+    public void Relative_config_override_is_ignored()
+    {
+        using var cfg = new TempConfig();
+        Environment.SetEnvironmentVariable("LUMINA_CONFIG_HOME", "relative-config");
+        Assert.True(Path.IsPathFullyQualified(Settings.ConfigDir));
+        Assert.DoesNotContain("relative-config", Settings.ConfigDir);
     }
 
     [Fact]

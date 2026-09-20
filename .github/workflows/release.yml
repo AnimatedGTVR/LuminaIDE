@@ -47,16 +47,21 @@ jobs:
           APP_VERSION="$(sed -n 's:.*<Version>\(.*\)</Version>.*:\1:p' app/LuminaIDE.csproj | head -1)"
           test "v$APP_VERSION" = "${GITHUB_REF_NAME}" || { echo "Tag ${GITHUB_REF_NAME} does not match <Version>$APP_VERSION</Version> in app/LuminaIDE.csproj"; exit 1; }
 
-      - name: Test, build and package
+      - name: Test, build and package (Linux/macOS)
+        if: runner.os != 'Windows'
         shell: bash
         run: |
-          if [ "$RUNNER_OS" = "Windows" ]; then
-            pwsh -File ./build.ps1 test
-            pwsh -File ./build.ps1 package
-          else
-            ./build.sh test
-            ./build.sh package
-          fi
+          ./build.sh test
+          ./build.sh package
+
+      - name: Test, build and package (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          ./build.ps1 test
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ./build.ps1 package
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Build graphical launcher
         run: dotnet build tools/Builder/Builder.csproj -c Release --nologo

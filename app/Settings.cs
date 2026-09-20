@@ -63,7 +63,7 @@ public sealed class Settings
     };
 
     /// <summary>
-    /// ~/.config/luminaide (or $XDG_CONFIG_HOME/luminaide; %APPDATA%\luminaide on Windows). DoNotVerify matters:
+    /// The OS application-data folder, or LUMINA_CONFIG_HOME/luminaide for an explicit override. DoNotVerify matters:
     /// by default .NET returns "" on Linux when the folder doesn't exist yet, which would silently
     /// become a relative path in the current directory.
     /// </summary>
@@ -71,6 +71,9 @@ public sealed class Settings
     {
         get
         {
+            var configOverride = Environment.GetEnvironmentVariable("LUMINA_CONFIG_HOME");
+            if (!string.IsNullOrWhiteSpace(configOverride) && Path.IsPathFullyQualified(configOverride))
+                return Path.Combine(configOverride, "luminaide");
             var root = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData, Environment.SpecialFolderOption.DoNotVerify);
             if (string.IsNullOrEmpty(root)) root = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".config");
             return Path.Combine(root, "luminaide");

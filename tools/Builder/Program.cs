@@ -2,6 +2,11 @@ using System.Diagnostics;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Layout;
+using Avalonia.Markup.Xaml;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
+using System.Text.Json;
+using AppTheme = LuminaIDE.Theme;
 using Avalonia.Media;
 using Avalonia.Styling;
 using Avalonia.Themes.Fluent;
@@ -19,8 +24,8 @@ public sealed class BuilderApp : Application
 {
     public override void Initialize()
     {
-        RequestedThemeVariant = ThemeVariant.Dark;
-        Styles.Add(new FluentTheme());
+        AvaloniaXamlLoader.Load(this);
+        ThemeManager.Apply(AppTheme.Fallback);
     }
     public override void OnFrameworkInitializationCompleted()
     {
@@ -34,7 +39,7 @@ public sealed class BuilderWindow : Window
 {
     readonly TextBox _source = new() { Watermark = "Choose the extracted LuminaIDE source folder" };
     readonly TextBox _log = new() { IsReadOnly = true, AcceptsReturn = true, TextWrapping = TextWrapping.NoWrap,
-        FontFamily = new FontFamily("Cascadia Code, Menlo, DejaVu Sans Mono"), FontSize = 12, MinHeight = 200 };
+        FontSize = 12, MinHeight = 140 };
     readonly TextBlock _status = new() { Text = "Ready · Start by checking your tools", TextWrapping = TextWrapping.Wrap };
     readonly ProgressBar _progress = new() { Height = 3, Minimum = 0, Maximum = 100 };
     readonly Button _cancel = new() { Content = "Stop", IsEnabled = false };
@@ -45,37 +50,80 @@ public sealed class BuilderWindow : Window
 
     public BuilderWindow()
     {
-        Title = "LuminaIDE · Build studio";
-        Width = 960; Height = 740; MinWidth = 700; MinHeight = 560;
-        Background = Brush.Parse("#10131D");
-        var content = new Grid { RowDefinitions = new("Auto,Auto,Auto,Auto,*,Auto"), Margin = new Thickness(30) };
-        var heading = new StackPanel { Spacing = 6 };
-        heading.Children.Add(new TextBlock { Text = "LUMINAIDE  /  DEVELOPER TOOLS", FontSize = 11, Foreground = Brush.Parse("#A99AFF"), LetterSpacing = 2 });
-        heading.Children.Add(new TextBlock { Text = "Build something yours.", FontSize = 30, FontWeight = FontWeight.Bold });
-        heading.Children.Add(new TextBlock { Text = "Check your tools, build the editor, or create a download for this computer.", Foreground = Brush.Parse("#A7B0C3"), TextWrapping = TextWrapping.Wrap });
-        content.Children.Add(heading);
+        Title = "LuminaIDE · Build Studio";
+        Width = 1060; Height = 820; MinWidth = 800; MinHeight = 720;
+        Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://LuminaIDE.Builder/Assets/icon.png")));
+        _log.Classes.Add("log");
+        var themes = LoadThemes();
+        var preferred = PreferredTheme();
+        var initial = themes.FirstOrDefault(t => t.Name == preferred) ?? themes.First(t => t.Name == "Vanta Night");
+        ThemeManager.Apply(initial);
+
+        var content = new Grid { RowDefinitions = new("Auto,Auto,Auto,*,Auto"), Margin = new Thickness(32, 28) };
+        var header = new Grid { ColumnDefinitions = new("Auto,*,Auto"), Margin = new Thickness(0, 0, 0, 24) };
+        var logo = new Image { Source = new Bitmap(AssetLoader.Open(new Uri("avares://LuminaIDE.Builder/Assets/icon.png"))), Width = 64, Height = 64, Margin = new Thickness(0, 0, 18, 0) };
+        header.Children.Add(logo);
+        var heading = new StackPanel { Spacing = 5, VerticalAlignment = VerticalAlignment.Center };
+        heading.Children.Add(Label("LUMINAIDE  /  DEVELOPER TOOLS", "section"));
+        heading.Children.Add(new TextBlock { Text = "Build Studio", FontSize = 32, FontWeight = FontWeight.Bold, LetterSpacing = -0.6 });
+        heading.Children.Add(Label("From source to something you can share.", "muted"));
+        Grid.SetColumn(heading, 1); header.Children.Add(heading);
+        var themePanel = new StackPanel { Spacing = 6, VerticalAlignment = VerticalAlignment.Center };
+        themePanel.Children.Add(Label("APPEARANCE", "section"));
+        var picker = new ComboBox { ItemsSource = themes.Select(t => t.Name).ToArray(), SelectedItem = initial.Name, Width = 178 };
+        picker.SelectionChanged += (_, _) => {
+            if (picker.SelectedItem is string name && themes.FirstOrDefault(t => t.Name == name) is { } selected)
+                ThemeManager.Apply(selected);
+        };
+        themePanel.Children.Add(picker); Grid.SetColumn(themePanel, 2); header.Children.Add(themePanel);
+        content.Children.Add(header);
+
+        var sourcePanel = new StackPanel { Spacing = 10 };
+        sourcePanel.Children.Add(Label("SOURCE FOLDER", "section"));
         var sourceRow = new Grid { ColumnDefinitions = new("*,Auto") };
         sourceRow.Children.Add(_source);
         var browse = new Button { Content = "Choose folder…", Margin = new Thickness(10, 0, 0, 0) }; Grid.SetColumn(browse, 1); sourceRow.Children.Add(browse);
         _actions.Add(browse);
         browse.Click += async (_, _) => {
             try {
-            var folders = await StorageProvider.OpenFolderPickerAsync(new() { Title = "LuminaIDE source folder", AllowMultiple = false });
-            if (folders.Count > 0 && folders[0].Path.IsFile) _source.Text = folders[0].Path.LocalPath;
+                var folders = await StorageProvider.OpenFolderPickerAsync(new() { Title = "LuminaIDE source folder", AllowMultiple = false });
+                if (folders.Count > 0 && folders[0].Path.IsFile) _source.Text = folders[0].Path.LocalPath;
             } catch (Exception ex) { _status.Text = ex.Message; }
         };
-        Grid.SetRow(sourceRow, 1); content.Children.Add(sourceRow);
-        var actions = new WrapPanel { Orientation = Orientation.Horizontal };
-        foreach (var (label, mode) in new[] { ("1  Check tools", "--check"), ("2  Build editor", "build"), ("Build + test", "test"), ("3  Create download", "package") })
+        sourcePanel.Children.Add(sourceRow);
+        var sourceCard = new Border { Child = sourcePanel, Margin = new Thickness(0, 0, 0, 18) }; sourceCard.Classes.Add("card");
+        Grid.SetRow(sourceCard, 1); content.Children.Add(sourceCard);
+
+        var workflow = new StackPanel { Spacing = 10, Margin = new Thickness(0, 0, 0, 18) };
+        workflow.Children.Add(Label("YOUR BUILD WORKFLOW", "section"));
+        var actions = new Avalonia.Controls.Primitives.UniformGrid { Columns = 4 };
+        foreach (var (number, label, hint, mode) in new[] {
+            ("01", "Check tools", "Check the prerequisites", "--check"),
+            ("02", "Build editor", "Compile LuminaIDE", "build"),
+            ("03", "Build + test", "Check that it works", "test"),
+            ("04", "Create download", "Package for this computer", "package") })
         {
-            var button = new Button { Content = label, Margin = new Thickness(0, 0, 10, 8), Padding = new Thickness(16, 12) };
+            var body = new StackPanel { Spacing = 7 };
+            var index = Label(number, "accent"); index.FontSize = 18;
+            body.Children.Add(index);
+            body.Children.Add(new TextBlock { Text = label, FontWeight = FontWeight.SemiBold, FontSize = 14 });
+            var description = Label(hint, "muted"); description.FontSize = 11.5; body.Children.Add(description);
+            var button = new Button { Content = body, Margin = new Thickness(0, 0, number == "04" ? 0 : 10, 0) };
+            button.Classes.Add("action");
             button.Click += async (_, _) => await Run(mode);
             _actions.Add(button); actions.Children.Add(button);
         }
-        Grid.SetRow(actions, 2); content.Children.Add(actions);
-        var hint = new TextBlock { Text = "Requires .NET 8 SDK, Rust, CMake and a C++ compiler. Packages include .NET.\nBuilds target this OS and architecture; use GitHub Actions for other computers.", Foreground = Brush.Parse("#A7B0C3"), FontSize = 12, TextWrapping = TextWrapping.Wrap };
-        Grid.SetRow(hint, 3); content.Children.Add(hint);
-        Grid.SetRow(_log, 4); content.Children.Add(_log);
+        workflow.Children.Add(actions);
+        var hintText = Label("Requires .NET 8 SDK, Rust, CMake and a C++ compiler. Downloads bundle .NET.", "muted");
+        hintText.FontSize = 12; workflow.Children.Add(hintText);
+        Grid.SetRow(workflow, 2); content.Children.Add(workflow);
+
+        var output = new Grid { RowDefinitions = new("Auto,*") };
+        var outputTitle = Label("BUILD OUTPUT", "section"); outputTitle.Margin = new Thickness(16, 12);
+        output.Children.Add(outputTitle); Grid.SetRow(_log, 1); output.Children.Add(_log);
+        var outputCard = new Border { Child = output, Padding = new Thickness(0), ClipToBounds = true, Margin = new Thickness(0, 0, 0, 16) };
+        outputCard.Classes.Add("card"); Grid.SetRow(outputCard, 3); content.Children.Add(outputCard);
+
         var footer = new StackPanel { Spacing = 10 };
         footer.Children.Add(_progress); footer.Children.Add(_status);
         var links = new WrapPanel();
@@ -83,12 +131,12 @@ public sealed class BuilderWindow : Window
         AddLink(links, "Open downloads", () => { var dir = Path.Combine(Folder(), "dist"); Directory.CreateDirectory(dir); Open(dir); });
         AddLink(links, "Save log…", async () => {
             try {
-            var file = await StorageProvider.SaveFilePickerAsync(new() { SuggestedFileName = "lumina-build.log" });
-            if (file is not null) { await using var stream = await file.OpenWriteAsync(); stream.SetLength(0); await using var writer = new StreamWriter(stream); await writer.WriteAsync(_log.Text); }
+                var file = await StorageProvider.SaveFilePickerAsync(new() { SuggestedFileName = "lumina-build.log" });
+                if (file is not null) { await using var stream = await file.OpenWriteAsync(); stream.SetLength(0); await using var writer = new StreamWriter(stream); await writer.WriteAsync(_log.Text); }
             } catch (Exception ex) { _status.Text = "Could not save log: " + ex.Message; }
         });
         _cancel.Click += (_, _) => Cancel(); links.Children.Add(_cancel);
-        footer.Children.Add(links); Grid.SetRow(footer, 5); content.Children.Add(footer); foreach (var child in content.Children.OfType<Control>().Where(c => Grid.GetRow(c) < 5)) child.Margin = new Thickness(0, 0, 0, 18);
+        footer.Children.Add(links); Grid.SetRow(footer, 4); content.Children.Add(footer);
         Content = content;
         _source.Text = FindSource();
         Closing += (_, e) => { if (_busy) { e.Cancel = true; Cancel(); _status.Text = "Stopping the build. Close this window once it finishes."; } };
@@ -104,6 +152,35 @@ public sealed class BuilderWindow : Window
             using var bitmap = new Avalonia.Media.Imaging.RenderTargetBitmap(new PixelSize((int)Bounds.Width, (int)Bounds.Height), new Vector(96, 96));
             bitmap.Render(this); bitmap.Save(args[shot + 1]); Close();
         };
+    }
+
+    static TextBlock Label(string text, string style)
+    {
+        var label = new TextBlock { Text = text, TextWrapping = TextWrapping.Wrap };
+        label.Classes.Add(style); return label;
+    }
+    static List<AppTheme> LoadThemes()
+    {
+        var themes = new Dictionary<string, AppTheme> { ["Vanta Night"] = AppTheme.Fallback };
+        foreach (var folder in new[] { Path.Combine(AppContext.BaseDirectory, "themes"), Settings.ThemesDir })
+        {
+            try {
+                if (Directory.Exists(folder)) foreach (var file in Directory.GetFiles(folder, "*.json"))
+                    if (AppTheme.Load(file) is { Name.Length: > 0 } theme) themes[theme.Name] = theme;
+            } catch (IOException) { } catch (UnauthorizedAccessException) { }
+        }
+        return themes.Values.OrderBy(t => t.Name).ToList();
+    }
+    static string PreferredTheme()
+    {
+        // Read preferences without rewriting the editor's settings or repairing a broken file.
+        try {
+            using var json = JsonDocument.Parse(File.ReadAllText(Settings.FilePath), new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip, AllowTrailingCommas = true });
+            foreach (var entry in json.RootElement.EnumerateObject())
+                if (entry.Name.Equals("theme", StringComparison.OrdinalIgnoreCase) && entry.Value.ValueKind == JsonValueKind.String)
+                    return entry.Value.GetString() ?? "Vanta Night";
+        } catch (IOException) { } catch (UnauthorizedAccessException) { } catch (JsonException) { } catch (InvalidOperationException) { }
+        return "Vanta Night";
     }
 
     void AddLink(Panel panel, string label, Action action)

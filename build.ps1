@@ -39,6 +39,10 @@ try {
     }
     if ($missing.Count) { throw 'Install the missing tools using docs/BUILDING.md, then try again.' }
     if (-not ((& dotnet --list-sdks) -match '^8\.')) { throw 'The .NET 8 SDK is required. See docs/BUILDING.md.' }
+    # Git Bash also ships a link.exe; always put the MSVC compiler directory first.
+    $compilerDir = Split-Path (Get-Command cl.exe).Source
+    $env:PATH = "$compilerDir;$env:PATH"
+    $env:CARGO_TARGET_X86_64_PC_WINDOWS_MSVC_LINKER = Join-Path $compilerDir 'link.exe'
     if ($Command -eq '--check') { exit 0 }
     $watch = [Diagnostics.Stopwatch]::StartNew()
     $lib = Join-Path $PSScriptRoot 'build\lib'

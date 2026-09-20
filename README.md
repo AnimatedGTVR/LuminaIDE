@@ -34,7 +34,7 @@ Tabs, 89 languages, a live Markdown preview, npm/Vite tools, an AI agent panel, 
 
 ## Install
 
-Grab a self-contained package from [Releases](https://github.com/AnimatedGTVR/LuminaIDE/releases) once a release is published. No .NET installation is needed.
+Download a self-contained package from [Releases](https://github.com/AnimatedGTVR/LuminaIDE/releases/latest). No .NET installation is needed.
 
 **[Download and build guide](docs/BUILDING.md)** · **[Build from any browser](https://github.com/AnimatedGTVR/LuminaIDE/actions/workflows/release.yml)**
 

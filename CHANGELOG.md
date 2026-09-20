@@ -5,12 +5,17 @@ All notable changes to LuminaIDE are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-09-20
+
+Build, download and make it yours.
+
 ### Added
 - **Build Studio**: a graphical builder for Windows, macOS and Linux with prerequisite checks, live compiler output, cancellation, tests and self-contained download packaging.
 - **Build from any browser**: manually trigger the Downloads workflow on GitHub to build Linux x64/ARM64, macOS Intel/Apple silicon and Windows x64 packages. Downloadable artifacts include SHA-256 checksums.
 - **Binary installers** in Linux and Windows downloads add app-menu / Start-menu entries without requiring source code or developer tools.
 
 ### Changed
+- **Build Studio matches the editor**: shared theme colours, Inter and JetBrains Mono, the LuminaIDE icon, matching cards and controls, and a theme picker that starts with your editor theme.
 - **A calmer interface**: opaque surfaces, a neutral Vanta Night palette, clearer secondary text, compact welcome cards and shorter release-note previews.
 - **Build scripts** now show numbered stages, check dependencies before building, preserve CMake generator choices, and expose build, run, test, package and GUI commands. Windows discovers Visual Studio Build Tools automatically.
 - Updated Intel macOS release runners and documented platform setup, architecture selection and browser builds.
@@ -19,6 +24,7 @@ All notable changes to LuminaIDE are documented here. The format follows
 - **Liquid Glass** themes, window blur settings and animated welcome-page orbs. Existing Liquid Glass selections migrate to Vanta Night; legacy translucent UI colours become opaque.
 
 ### Fixed
+- Cross-platform configuration isolation and Windows builds selecting Git Bash’s `link.exe` instead of the MSVC linker.
 - Linux release downloads no longer include a source-only installer that cannot work from the archive.
 
 ## [0.2.0] - 2026-09-20

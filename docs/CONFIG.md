@@ -5,8 +5,10 @@ Settings live in one file, `settings.json`. Change them on the **Settings page**
 | OS | Config folder |
 |---|---|
 | Linux | `~/.config/luminaide` (or `$XDG_CONFIG_HOME/luminaide`) |
-| macOS | `~/.config/luminaide` |
+| macOS | `~/Library/Application Support/luminaide` |
 | Windows | `%APPDATA%\luminaide` |
+
+Set `LUMINA_CONFIG_HOME` to an absolute directory to override the config root on any OS; LuminaIDE adds a `luminaide/` subfolder. Relative overrides are ignored. This is also useful for isolated testing.
 
 Open it from **Settings → Open settings.json** or the command palette. Files in that folder:
 

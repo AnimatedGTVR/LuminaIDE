@@ -6,10 +6,20 @@
     <Nullable>enable</Nullable>
     <InvariantGlobalization>true</InvariantGlobalization>
     <AssemblyName>LuminaIDE.Builder</AssemblyName>
+    <Version>0.3.0</Version>
+    <ApplicationIcon>../../app/Assets/icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.2.7" />
     <PackageReference Include="Avalonia.Desktop" Version="11.2.7" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="../../app/Theme.cs" Link="Shared/Theme.cs" />
+    <Compile Include="../../app/Settings.cs" Link="Shared/Settings.cs" />
+    <AvaloniaResource Include="../../app/Assets/Fonts/*.ttf" Link="Assets/Fonts/%(Filename)%(Extension)" />
+    <AvaloniaResource Include="../../app/Assets/icon.png" Link="Assets/icon.png" />
+    <None Include="../../app/Assets/Fonts/OFL-*.txt" Link="licenses/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../extensions/lumina-themes/themes/*.json" Link="themes/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 [package]
 name = "lumina_core"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 description = "LuminaIDE engine: workspace listing, file I/O and project search behind a C ABI"
 
