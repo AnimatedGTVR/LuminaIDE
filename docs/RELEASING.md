@@ -1,6 +1,6 @@
 # Releasing
 
-1. Move the completed changes from `Unreleased` to a new version/date in `CHANGELOG.md`.
+1. Move the completed changes from `Unreleased` to a new version/date in `CHANGELOG.md` (add a one-line summary under the heading and leave an empty `Unreleased` above it). Every change should already be listed there; see CONTRIBUTING.
 2. Update `<Version>` in `app/LuminaIDE.csproj`, the version in `core/Cargo.toml`, and regenerate `core/Cargo.lock` with Cargo.
 3. Push a matching tag, for example `git tag v0.3.0` then `git push origin v0.3.0`.
 4. **Downloads** builds and tests five native targets: Linux x64/ARM64, macOS Intel/Apple silicon and Windows x64. Every package includes .NET, native libraries, extensions and licenses. Each archive has a SHA-256 sidecar.

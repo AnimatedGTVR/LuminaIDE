@@ -27,4 +27,6 @@ Thanks for helping. LuminaIDE is three small projects that fit together:
 - **A bug fix**: add a test where you can (`core/` has unit and integration tests). Screenshots of UI changes help; the app can
   render itself to a PNG with `--screenshot out.png` (and `--page settings`, `--theme "Nord"`, ...).
 
-Please keep changes focused, and update `CHANGELOG.md` under *Unreleased*.
+Please keep changes focused. **Every user-visible change gets a line in `CHANGELOG.md` under *Unreleased*, in the same
+commit**: small fixes, big features and early experiments alike (pure refactors and typo fixes can skip it). Put it under
+*Added*, *Changed*, *Fixed* or *Removed*, in plain language, most important first.
