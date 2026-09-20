@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- Visual Studio developer shells export Platform=x64. Keep the managed
+         output path stable; native code and published runtime IDs select the CPU. -->
+    <Platform>AnyCPU</Platform>
+  </PropertyGroup>
+</Project>

@@ -43,9 +43,11 @@ case "$(uname -s)" in
 esac
 cp "core/target/release/liblumina_core.$NATIVE_EXT" "$LIB/"
 step '[2/3] C++ terminal'
-GEN=()
-if [[ ! -f build/native/CMakeCache.txt ]] && command -v ninja >/dev/null; then GEN=(-G Ninja); fi
-cmake -S native -B build/native "${GEN[@]}" -DCMAKE_BUILD_TYPE=Release "-DLUMINA_OUT=$LIB"
+# Keep the argument array nonempty: macOS Bash 3.2 treats an empty array as
+# unset under nounset, including when reusing an existing CMake build folder.
+CMAKE_ARGS=(-S native -B build/native -DCMAKE_BUILD_TYPE=Release "-DLUMINA_OUT=$LIB")
+if [[ ! -f build/native/CMakeCache.txt ]] && command -v ninja >/dev/null; then CMAKE_ARGS+=(-G Ninja); fi
+cmake "${CMAKE_ARGS[@]}"
 cmake --build build/native --config Release --parallel
 step '[3/3] Desktop app'
 dotnet build app/LuminaIDE.csproj -c Release --nologo -v minimal

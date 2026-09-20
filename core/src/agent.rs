@@ -365,9 +365,18 @@ impl Agent {
     }
 
     fn spawn(kind: Kind, cfg: Config, exe: &Path) -> Agent {
-        let mut child = match build_command(kind, &cfg, exe).spawn() {
-            Ok(c) => c,
-            Err(e) => return Agent::failed(format!("Could not start {}: {e}", exe.display())),
+        // "Text file busy" (ETXTBSY, 26) happens when a script was written moments ago and another thread forked
+        // while its file was still open for writing. It clears within milliseconds, so retry briefly.
+        let mut attempt = 0;
+        let mut child = loop {
+            match build_command(kind, &cfg, exe).spawn() {
+                Ok(c) => break c,
+                Err(e) if e.raw_os_error() == Some(26) && attempt < 20 => {
+                    attempt += 1;
+                    thread::sleep(Duration::from_millis(25));
+                }
+                Err(e) => return Agent::failed(format!("Could not start {}: {e}", exe.display())),
+            }
         };
 
         let stdin = child.stdin.take();

@@ -24,7 +24,8 @@ Build, download and make it yours.
 - **Liquid Glass** themes, window blur settings and animated welcome-page orbs. Existing Liquid Glass selections migrate to Vanta Night; legacy translucent UI colours become opaque.
 
 ### Fixed
-- Cross-platform configuration isolation and Windows builds selecting Git Bash’s `link.exe` instead of the MSVC linker.
+- Cross-platform configuration isolation, Windows builds selecting Git Bash’s `link.exe` instead of the MSVC linker, and Visual Studio environment variables changing managed output paths.
+- Repeated builds and packaging with the Bash 3.2 shell included in macOS.
 - Linux release downloads no longer include a source-only installer that cannot work from the archive.
 
 ## [0.2.0] - 2026-09-20
